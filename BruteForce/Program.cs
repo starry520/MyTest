@@ -9,6 +9,7 @@ namespace BruteForce
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
