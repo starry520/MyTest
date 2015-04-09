@@ -1,0 +1,7 @@
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\cloneMember\bin\Debug\cloneMember.exe
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\cloneMember\bin\Debug\cloneMember.pdb
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\cloneMember\obj\x86\Debug\cloneMember.exe
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\cloneMember\obj\x86\Debug\cloneMember.pdb
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\cloneMember\obj\x86\Debug\cloneMember.csprojResolveAssemblyReference.cache
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\cloneMember\bin\Debug\CommClass.dll
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\cloneMember\bin\Debug\CommClass.pdb

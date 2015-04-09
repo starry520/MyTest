@@ -1,0 +1,7 @@
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\Equal\bin\Debug\Equal.exe
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\Equal\bin\Debug\Equal.pdb
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\Equal\bin\Debug\CommClass.dll
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\Equal\bin\Debug\CommClass.pdb
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\Equal\obj\x86\Debug\Equal.csprojResolveAssemblyReference.cache
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\Equal\obj\x86\Debug\Equal.exe
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\Equal\obj\x86\Debug\Equal.pdb

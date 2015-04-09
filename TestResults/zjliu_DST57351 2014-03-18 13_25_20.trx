@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="dd60021c-fd23-4da2-a2c7-b55486743e01" name="zjliu@DST57351 2014-03-18 13:25:20" runUser="CN1\zjliu" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="60651dd7-cc68-4f43-ab38-6a68e8dcd243">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="zjliu_DST57351 2014-03-18 13_25_20">
+      <DeploymentItem filename="D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\AppSample\bin\Debug\AppSample.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2014-03-18T13:25:20.4211831+08:00" queuing="2014-03-18T13:25:21.3461831+08:00" start="2014-03-18T13:25:21.4711831+08:00" finish="2014-03-18T13:25:22.9481831+08:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="6" executed="6" passed="6" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="MinusTest" storage="d:\users\zjliu\documents\visual studio 2010\projects\divtest\testproject1\bin\debug\testproject1.dll" id="6e2c502b-3de3-c49c-bc00-e23afad20320">
+      <Execution id="032d5a00-b3d6-4ddd-9611-9ad2a39ca229" />
+      <TestMethod codeBase="d:/Users/zjliu/Documents/Visual Studio 2010/Projects/DIVTest/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.MathUtilityTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MinusTest" />
+    </UnitTest>
+    <UnitTest name="AddTest" storage="d:\users\zjliu\documents\visual studio 2010\projects\divtest\testproject1\bin\debug\testproject1.dll" id="546e58af-c35b-5c8e-9042-53bd81cb32bc">
+      <Execution id="f307c47d-6397-4f7d-a915-70b120c1fdb6" />
+      <TestMethod codeBase="d:/Users/zjliu/Documents/Visual Studio 2010/Projects/DIVTest/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.MathUtilityTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddTest" />
+    </UnitTest>
+    <UnitTest name="DivideTest" storage="d:\users\zjliu\documents\visual studio 2010\projects\divtest\testproject1\bin\debug\testproject1.dll" id="4d8f1ce6-8b2f-4cb5-cb87-ed0c4edaa259">
+      <Execution id="8f5a22bb-17b6-442c-aca2-c970fc2f2c48" />
+      <TestMethod codeBase="d:/Users/zjliu/Documents/Visual Studio 2010/Projects/DIVTest/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.MathUtilityTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DivideTest" />
+    </UnitTest>
+    <UnitTest name="MathUtilityConstructorTest" storage="d:\users\zjliu\documents\visual studio 2010\projects\divtest\testproject1\bin\debug\testproject1.dll" id="8efaa88d-b1d6-1a52-abca-93ba8078ebf4">
+      <Execution id="55ce8fff-5dac-4776-8527-90da965cef42" />
+      <TestMethod codeBase="d:/Users/zjliu/Documents/Visual Studio 2010/Projects/DIVTest/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.MathUtilityTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MathUtilityConstructorTest" />
+    </UnitTest>
+    <UnitTest name="MultiplyTest" storage="d:\users\zjliu\documents\visual studio 2010\projects\divtest\testproject1\bin\debug\testproject1.dll" id="0ab1c01d-2230-5cf8-f505-4de7f32ee7e2">
+      <Execution id="40910dfa-8382-4ab7-9cd7-119a078d01e8" />
+      <TestMethod codeBase="d:/Users/zjliu/Documents/Visual Studio 2010/Projects/DIVTest/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.MathUtilityTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MultiplyTest" />
+    </UnitTest>
+    <UnitTest name="TestMethod1" storage="d:\users\zjliu\documents\visual studio 2010\projects\divtest\testproject1\bin\debug\testproject1.dll" id="59863143-3238-122e-4d8a-637b491cc755">
+      <Execution id="9f12e16b-5c63-4408-a8c3-5c274f602d1d" />
+      <TestMethod codeBase="d:/Users/zjliu/Documents/Visual Studio 2010/Projects/DIVTest/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.UnitTest1, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestMethod1" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="59863143-3238-122e-4d8a-637b491cc755" executionId="9f12e16b-5c63-4408-a8c3-5c274f602d1d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8efaa88d-b1d6-1a52-abca-93ba8078ebf4" executionId="55ce8fff-5dac-4776-8527-90da965cef42" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="546e58af-c35b-5c8e-9042-53bd81cb32bc" executionId="f307c47d-6397-4f7d-a915-70b120c1fdb6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4d8f1ce6-8b2f-4cb5-cb87-ed0c4edaa259" executionId="8f5a22bb-17b6-442c-aca2-c970fc2f2c48" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6e2c502b-3de3-c49c-bc00-e23afad20320" executionId="032d5a00-b3d6-4ddd-9611-9ad2a39ca229" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0ab1c01d-2230-5cf8-f505-4de7f32ee7e2" executionId="40910dfa-8382-4ab7-9cd7-119a078d01e8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="9f12e16b-5c63-4408-a8c3-5c274f602d1d" testId="59863143-3238-122e-4d8a-637b491cc755" testName="TestMethod1" computerName="DST57351" duration="00:00:00.0069241" startTime="2014-03-18T13:25:21.5831831+08:00" endTime="2014-03-18T13:25:22.7941831+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9f12e16b-5c63-4408-a8c3-5c274f602d1d">
+    </UnitTestResult>
+    <UnitTestResult executionId="55ce8fff-5dac-4776-8527-90da965cef42" testId="8efaa88d-b1d6-1a52-abca-93ba8078ebf4" testName="MathUtilityConstructorTest" computerName="DST57351" duration="00:00:00.0094651" startTime="2014-03-18T13:25:22.8041831+08:00" endTime="2014-03-18T13:25:22.8171831+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="55ce8fff-5dac-4776-8527-90da965cef42">
+    </UnitTestResult>
+    <UnitTestResult executionId="f307c47d-6397-4f7d-a915-70b120c1fdb6" testId="546e58af-c35b-5c8e-9042-53bd81cb32bc" testName="AddTest" computerName="DST57351" duration="00:00:00.0008277" startTime="2014-03-18T13:25:22.8251831+08:00" endTime="2014-03-18T13:25:22.8301831+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f307c47d-6397-4f7d-a915-70b120c1fdb6">
+    </UnitTestResult>
+    <UnitTestResult executionId="8f5a22bb-17b6-442c-aca2-c970fc2f2c48" testId="4d8f1ce6-8b2f-4cb5-cb87-ed0c4edaa259" testName="DivideTest" computerName="DST57351" duration="00:00:00.0002645" startTime="2014-03-18T13:25:22.8391831+08:00" endTime="2014-03-18T13:25:22.8431831+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8f5a22bb-17b6-442c-aca2-c970fc2f2c48">
+    </UnitTestResult>
+    <UnitTestResult executionId="032d5a00-b3d6-4ddd-9611-9ad2a39ca229" testId="6e2c502b-3de3-c49c-bc00-e23afad20320" testName="MinusTest" computerName="DST57351" duration="00:00:00.0002354" startTime="2014-03-18T13:25:22.8521831+08:00" endTime="2014-03-18T13:25:22.8561831+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="032d5a00-b3d6-4ddd-9611-9ad2a39ca229">
+    </UnitTestResult>
+    <UnitTestResult executionId="40910dfa-8382-4ab7-9cd7-119a078d01e8" testId="0ab1c01d-2230-5cf8-f505-4de7f32ee7e2" testName="MultiplyTest" computerName="DST57351" duration="00:00:00.0002386" startTime="2014-03-18T13:25:22.8641831+08:00" endTime="2014-03-18T13:25:22.8681831+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="40910dfa-8382-4ab7-9cd7-119a078d01e8">
+    </UnitTestResult>
+  </Results>
+</TestRun>

@@ -1,0 +1,5 @@
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\电话号码整理1\bin\Debug\电话号码整理1.exe
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\电话号码整理1\bin\Debug\电话号码整理1.pdb
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\电话号码整理1\obj\x86\Debug\电话号码整理1.exe
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\电话号码整理1\obj\x86\Debug\电话号码整理1.pdb
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\电话号码整理1\obj\x86\Debug\电话号码整理1.csprojResolveAssemblyReference.cache

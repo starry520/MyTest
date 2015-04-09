@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title></title>
+</head>
+<body>
+<script src="http://webresource.c-ctrip.com/code/cquery/LABjs/LAB.js"></script>
+<script type="text/javascript">
+    $LAB
+    .script({ src: "http://webresource.c-ctrip.com/code/cquery/cQuery_110421.js", charset: "utf-8" }).wait(waitExec).script({ src: "http://webresource.c-ctrip.com/ResCRMOnline/r4/js/index/index.min.js?130605.js", charset: "utf-8" }).wait(loadSuccess);
+    function waitExec() {
+        alert('等待解析');
+    }
+    function loadSuccess() {
+        alert('加载解析完成');
+    }
+</script>
+</body>
+</html>

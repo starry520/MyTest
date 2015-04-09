@@ -1,0 +1,4 @@
+d:\users\zjliu\documents\visual studio 2010\Projects\DIVTest\WebApplication1\bin\WebApplication1.dll
+d:\users\zjliu\documents\visual studio 2010\Projects\DIVTest\WebApplication1\bin\WebApplication1.pdb
+d:\users\zjliu\documents\visual studio 2010\Projects\DIVTest\WebApplication1\obj\Debug\WebApplication1.dll
+d:\users\zjliu\documents\visual studio 2010\Projects\DIVTest\WebApplication1\obj\Debug\WebApplication1.pdb

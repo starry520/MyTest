@@ -1,0 +1,4 @@
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\AppSample\bin\Debug\AppSample.dll
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\AppSample\bin\Debug\AppSample.pdb
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\AppSample\obj\Debug\AppSample.dll
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\AppSample\obj\Debug\AppSample.pdb

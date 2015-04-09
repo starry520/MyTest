@@ -1,0 +1,7 @@
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\Linq\bin\Debug\Linq.exe
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\Linq\bin\Debug\Linq.pdb
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\Linq\obj\x86\Debug\Linq.exe
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\Linq\obj\x86\Debug\Linq.pdb
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\Linq\bin\Debug\CommClass.dll
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\Linq\bin\Debug\CommClass.pdb
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\Linq\obj\x86\Debug\Linq.csprojResolveAssemblyReference.cache

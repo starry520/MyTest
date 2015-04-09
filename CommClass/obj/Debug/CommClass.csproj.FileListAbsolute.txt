@@ -1,0 +1,6 @@
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\CommClass\bin\Debug\CommClass.dll
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\CommClass\bin\Debug\CommClass.pdb
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\CommClass\obj\Debug\CommClass.dll
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\CommClass\obj\Debug\CommClass.pdb
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\CommClass\bin\Debug\Ctrip.Common.Utility.dll
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\CommClass\obj\Debug\CommClass.csprojResolveAssemblyReference.cache

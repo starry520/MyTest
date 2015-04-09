@@ -1,0 +1,6 @@
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\xssTest\bin\xssTest.dll
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\xssTest\bin\xssTest.pdb
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\xssTest\obj\Debug\xssTest.dll
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\xssTest\obj\Debug\xssTest.pdb
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\xssTest\bin\AccountCrypt.dll
+D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\xssTest\obj\Debug\xssTest.csprojResolveAssemblyReference.cache
