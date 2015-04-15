@@ -2,3 +2,5 @@ D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\DictionaryTest\bin\
 D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\DictionaryTest\bin\Debug\DictionaryTest.pdb
 D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\DictionaryTest\obj\x86\Debug\DictionaryTest.exe
 D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\DictionaryTest\obj\x86\Debug\DictionaryTest.pdb
+D:\zj\Mycode\MyTest\DictionaryTest\obj\x86\Debug\DictionaryTest.exe
+D:\zj\Mycode\MyTest\DictionaryTest\obj\x86\Debug\DictionaryTest.pdb
