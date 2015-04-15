@@ -2,3 +2,9 @@ D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\PopDiv\bin\PopDiv.d
 D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\PopDiv\bin\PopDiv.pdb
 D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\PopDiv\obj\Debug\PopDiv.dll
 D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\PopDiv\obj\Debug\PopDiv.pdb
+D:\zj\Mycode\MyTest\PopDiv\bin\PopDiv.dll.config
+D:\zj\Mycode\MyTest\PopDiv\bin\PopDiv.dll
+D:\zj\Mycode\MyTest\PopDiv\bin\PopDiv.pdb
+D:\zj\Mycode\MyTest\PopDiv\obj\Debug\PopDiv.csprojResolveAssemblyReference.cache
+D:\zj\Mycode\MyTest\PopDiv\obj\Debug\PopDiv.dll
+D:\zj\Mycode\MyTest\PopDiv\obj\Debug\PopDiv.pdb

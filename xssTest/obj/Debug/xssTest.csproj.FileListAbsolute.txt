@@ -4,3 +4,10 @@ D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\xssTest\obj\Debug\x
 D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\xssTest\obj\Debug\xssTest.pdb
 D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\xssTest\bin\AccountCrypt.dll
 D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\xssTest\obj\Debug\xssTest.csprojResolveAssemblyReference.cache
+D:\zj\Mycode\MyTest\xssTest\bin\xssTest.dll.config
+D:\zj\Mycode\MyTest\xssTest\bin\xssTest.dll
+D:\zj\Mycode\MyTest\xssTest\bin\xssTest.pdb
+D:\zj\Mycode\MyTest\xssTest\bin\AccountCrypt.dll
+D:\zj\Mycode\MyTest\xssTest\obj\Debug\xssTest.csprojResolveAssemblyReference.cache
+D:\zj\Mycode\MyTest\xssTest\obj\Debug\xssTest.dll
+D:\zj\Mycode\MyTest\xssTest\obj\Debug\xssTest.pdb

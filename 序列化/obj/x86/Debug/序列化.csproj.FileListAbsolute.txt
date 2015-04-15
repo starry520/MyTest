@@ -2,3 +2,8 @@ D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\序列化\bin\Debug
 D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\序列化\bin\Debug\序列化.pdb
 D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\序列化\obj\x86\Debug\序列化.exe
 D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\序列化\obj\x86\Debug\序列化.pdb
+D:\zj\Mycode\MyTest\序列化\bin\Debug\序列化.exe
+D:\zj\Mycode\MyTest\序列化\bin\Debug\序列化.pdb
+D:\zj\Mycode\MyTest\序列化\obj\x86\Debug\序列化.csprojResolveAssemblyReference.cache
+D:\zj\Mycode\MyTest\序列化\obj\x86\Debug\序列化.exe
+D:\zj\Mycode\MyTest\序列化\obj\x86\Debug\序列化.pdb

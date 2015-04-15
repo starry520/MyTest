@@ -2,3 +2,9 @@ D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\JsonTest\bin\JsonTe
 D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\JsonTest\bin\JsonTest.pdb
 D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\JsonTest\obj\Debug\JsonTest.dll
 D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\JsonTest\obj\Debug\JsonTest.pdb
+D:\zj\Mycode\MyTest\JsonTest\bin\JsonTest.dll.config
+D:\zj\Mycode\MyTest\JsonTest\bin\JsonTest.dll
+D:\zj\Mycode\MyTest\JsonTest\bin\JsonTest.pdb
+D:\zj\Mycode\MyTest\JsonTest\obj\Debug\JsonTest.csprojResolveAssemblyReference.cache
+D:\zj\Mycode\MyTest\JsonTest\obj\Debug\JsonTest.dll
+D:\zj\Mycode\MyTest\JsonTest\obj\Debug\JsonTest.pdb

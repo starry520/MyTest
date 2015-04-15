@@ -1,0 +1,6 @@
+D:\zj\Mycode\MyTest\泛型获取属性\bin\Debug\泛型获取属性.exe.config
+D:\zj\Mycode\MyTest\泛型获取属性\bin\Debug\泛型获取属性.exe
+D:\zj\Mycode\MyTest\泛型获取属性\bin\Debug\泛型获取属性.pdb
+D:\zj\Mycode\MyTest\泛型获取属性\obj\Debug\Generics.csprojResolveAssemblyReference.cache
+D:\zj\Mycode\MyTest\泛型获取属性\obj\Debug\泛型获取属性.exe
+D:\zj\Mycode\MyTest\泛型获取属性\obj\Debug\泛型获取属性.pdb

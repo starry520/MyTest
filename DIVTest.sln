@@ -71,7 +71,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Equal", "Equal\Equal.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DictionaryTest", "DictionaryTest\DictionaryTest.csproj", "{9CFBA240-5E08-4E94-8907-AAE6068205EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "泛型获取属性", "泛型获取属性\泛型获取属性.csproj", "{32F80EB5-9D32-454B-A026-1C358C7C944B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generics", "泛型获取属性\Generics.csproj", "{32F80EB5-9D32-454B-A026-1C358C7C944B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

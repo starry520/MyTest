@@ -3,3 +3,8 @@ D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\jstest\bin\Debug\js
 D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\jstest\obj\x86\Debug\jstest.exe
 D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\jstest\obj\x86\Debug\jstest.pdb
 D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\jstest\obj\x86\Debug\jstest.csprojResolveAssemblyReference.cache
+D:\zj\Mycode\MyTest\jstest\bin\Debug\jstest.exe
+D:\zj\Mycode\MyTest\jstest\bin\Debug\jstest.pdb
+D:\zj\Mycode\MyTest\jstest\obj\x86\Debug\jstest.csprojResolveAssemblyReference.cache
+D:\zj\Mycode\MyTest\jstest\obj\x86\Debug\jstest.exe
+D:\zj\Mycode\MyTest\jstest\obj\x86\Debug\jstest.pdb

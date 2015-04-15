@@ -2,3 +2,8 @@ d:\Users\zjliu\documents\visual studio 2010\Projects\DIVTest\DIVTest\bin\Debug\D
 d:\Users\zjliu\documents\visual studio 2010\Projects\DIVTest\DIVTest\bin\Debug\DIVTest.pdb
 d:\Users\zjliu\documents\visual studio 2010\Projects\DIVTest\DIVTest\obj\x86\Debug\DIVTest.exe
 d:\Users\zjliu\documents\visual studio 2010\Projects\DIVTest\DIVTest\obj\x86\Debug\DIVTest.pdb
+D:\zj\Mycode\MyTest\DIVTest\bin\Debug\DIVTest.exe
+D:\zj\Mycode\MyTest\DIVTest\bin\Debug\DIVTest.pdb
+D:\zj\Mycode\MyTest\DIVTest\obj\x86\Debug\DIVTest.csprojResolveAssemblyReference.cache
+D:\zj\Mycode\MyTest\DIVTest\obj\x86\Debug\DIVTest.exe
+D:\zj\Mycode\MyTest\DIVTest\obj\x86\Debug\DIVTest.pdb

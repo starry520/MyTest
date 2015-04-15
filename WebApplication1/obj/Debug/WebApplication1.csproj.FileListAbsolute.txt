@@ -2,3 +2,9 @@ d:\users\zjliu\documents\visual studio 2010\Projects\DIVTest\WebApplication1\bin
 d:\users\zjliu\documents\visual studio 2010\Projects\DIVTest\WebApplication1\bin\WebApplication1.pdb
 d:\users\zjliu\documents\visual studio 2010\Projects\DIVTest\WebApplication1\obj\Debug\WebApplication1.dll
 d:\users\zjliu\documents\visual studio 2010\Projects\DIVTest\WebApplication1\obj\Debug\WebApplication1.pdb
+D:\zj\Mycode\MyTest\WebApplication1\bin\WebApplication1.dll.config
+D:\zj\Mycode\MyTest\WebApplication1\bin\WebApplication1.dll
+D:\zj\Mycode\MyTest\WebApplication1\bin\WebApplication1.pdb
+D:\zj\Mycode\MyTest\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
+D:\zj\Mycode\MyTest\WebApplication1\obj\Debug\WebApplication1.dll
+D:\zj\Mycode\MyTest\WebApplication1\obj\Debug\WebApplication1.pdb

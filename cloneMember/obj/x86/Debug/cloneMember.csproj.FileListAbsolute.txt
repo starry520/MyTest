@@ -5,3 +5,10 @@ D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\cloneMember\obj\x86
 D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\cloneMember\obj\x86\Debug\cloneMember.csprojResolveAssemblyReference.cache
 D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\cloneMember\bin\Debug\CommClass.dll
 D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\cloneMember\bin\Debug\CommClass.pdb
+D:\zj\Mycode\MyTest\cloneMember\bin\Debug\cloneMember.exe
+D:\zj\Mycode\MyTest\cloneMember\bin\Debug\cloneMember.pdb
+D:\zj\Mycode\MyTest\cloneMember\bin\Debug\CommClass.dll
+D:\zj\Mycode\MyTest\cloneMember\bin\Debug\CommClass.pdb
+D:\zj\Mycode\MyTest\cloneMember\obj\x86\Debug\cloneMember.csprojResolveAssemblyReference.cache
+D:\zj\Mycode\MyTest\cloneMember\obj\x86\Debug\cloneMember.exe
+D:\zj\Mycode\MyTest\cloneMember\obj\x86\Debug\cloneMember.pdb
