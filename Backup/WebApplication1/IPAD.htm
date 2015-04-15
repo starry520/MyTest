@@ -1,0 +1,44 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title></title>
+</head>
+<body>
+<script src="http://webresource.c-ctrip.com/code/cquery/LABjs/LAB.js"></script>
+<script type="text/javascript">
+    $globalPad = true;
+    $LAB
+    .script({ src: "http://webresource.c-ctrip.com/code/cquery/cQuery_110421.js", charset: "utf-8" }).wait(waitExec)
+	.padScript({ src: "http://webresource.c-ctrip.com/code/cquery/pad.js", charset: "utf-8" }).wait()
+    .script({ src: "http://webresource.c-ctrip.com/ResCRMOnline/r4/js/index/index.min.js?130605.js", charset: "utf-8" }).wait(loadSuccess);
+    function waitExec() {
+        alert('等待解析');
+    }
+    function loadSuccess() {
+        alert('加载解析完成');
+    }
+</script>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title></title>
+</head>
+<body>
+<script src="http://webresource.c-ctrip.com/code/cquery/cQuery_110421.js">    alert(window.$globalPad);</script>
+<script type="text/javascript">
+    window.$globalPad = true;
+</script>
+<script src="http://webresource.c-ctrip.com/code/cquery/pad.js"></script>
+<script src="http://webresource.c-ctrip.com/ResCRMOnline/r4/js/index/index.min.js?130605.js">
+    alert(window.$globalPad);
+
+</script>
+</body>
+</html>
+			
