@@ -8,3 +8,9 @@ D:\zj\Mycode\MyTest\html5\bin\html5.pdb
 D:\zj\Mycode\MyTest\html5\obj\Debug\html5.csprojResolveAssemblyReference.cache
 D:\zj\Mycode\MyTest\html5\obj\Debug\html5.dll
 D:\zj\Mycode\MyTest\html5\obj\Debug\html5.pdb
+E:\Code\MyTest\html5\bin\html5.dll.config
+E:\Code\MyTest\html5\bin\html5.dll
+E:\Code\MyTest\html5\bin\html5.pdb
+E:\Code\MyTest\html5\obj\Debug\html5.csprojResolveAssemblyReference.cache
+E:\Code\MyTest\html5\obj\Debug\html5.dll
+E:\Code\MyTest\html5\obj\Debug\html5.pdb

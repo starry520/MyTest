@@ -5,3 +5,10 @@ D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\Equal\bin\Debug\Com
 D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\Equal\obj\x86\Debug\Equal.csprojResolveAssemblyReference.cache
 D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\Equal\obj\x86\Debug\Equal.exe
 D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\Equal\obj\x86\Debug\Equal.pdb
+E:\Code\MyTest\Equal\bin\Debug\Equal.exe
+E:\Code\MyTest\Equal\bin\Debug\Equal.pdb
+E:\Code\MyTest\Equal\bin\Debug\CommClass.dll
+E:\Code\MyTest\Equal\bin\Debug\CommClass.pdb
+E:\Code\MyTest\Equal\obj\x86\Debug\Equal.csprojResolveAssemblyReference.cache
+E:\Code\MyTest\Equal\obj\x86\Debug\Equal.exe
+E:\Code\MyTest\Equal\obj\x86\Debug\Equal.pdb

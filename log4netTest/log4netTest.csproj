@@ -51,7 +51,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <CodeAnalysisDictionary Include="log4net.config" />
+    <EmbeddedResource Include="log4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="log4net.dll" />

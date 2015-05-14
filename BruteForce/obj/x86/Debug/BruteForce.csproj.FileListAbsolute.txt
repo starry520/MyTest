@@ -2,3 +2,7 @@ D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\BruteForce\bin\Debu
 D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\BruteForce\bin\Debug\BruteForce.pdb
 D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\BruteForce\obj\x86\Debug\BruteForce.exe
 D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\BruteForce\obj\x86\Debug\BruteForce.pdb
+E:\Code\MyTest\BruteForce\bin\Debug\BruteForce.exe
+E:\Code\MyTest\BruteForce\bin\Debug\BruteForce.pdb
+E:\Code\MyTest\BruteForce\obj\x86\Debug\BruteForce.exe
+E:\Code\MyTest\BruteForce\obj\x86\Debug\BruteForce.pdb

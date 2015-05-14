@@ -8,3 +8,8 @@ D:\zj\Mycode\MyTest\jstest\bin\Debug\jstest.pdb
 D:\zj\Mycode\MyTest\jstest\obj\x86\Debug\jstest.csprojResolveAssemblyReference.cache
 D:\zj\Mycode\MyTest\jstest\obj\x86\Debug\jstest.exe
 D:\zj\Mycode\MyTest\jstest\obj\x86\Debug\jstest.pdb
+E:\Code\MyTest\jstest\bin\Debug\jstest.exe
+E:\Code\MyTest\jstest\bin\Debug\jstest.pdb
+E:\Code\MyTest\jstest\obj\x86\Debug\jstest.csprojResolveAssemblyReference.cache
+E:\Code\MyTest\jstest\obj\x86\Debug\jstest.exe
+E:\Code\MyTest\jstest\obj\x86\Debug\jstest.pdb

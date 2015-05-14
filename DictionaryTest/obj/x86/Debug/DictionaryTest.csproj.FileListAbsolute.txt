@@ -6,3 +6,7 @@ D:\zj\Mycode\MyTest\DictionaryTest\obj\x86\Debug\DictionaryTest.exe
 D:\zj\Mycode\MyTest\DictionaryTest\obj\x86\Debug\DictionaryTest.pdb
 E:\codes\MyTest\DictionaryTest\obj\x86\Debug\DictionaryTest.exe
 E:\codes\MyTest\DictionaryTest\obj\x86\Debug\DictionaryTest.pdb
+E:\Code\MyTest\DictionaryTest\bin\Debug\DictionaryTest.exe
+E:\Code\MyTest\DictionaryTest\bin\Debug\DictionaryTest.pdb
+E:\Code\MyTest\DictionaryTest\obj\x86\Debug\DictionaryTest.exe
+E:\Code\MyTest\DictionaryTest\obj\x86\Debug\DictionaryTest.pdb

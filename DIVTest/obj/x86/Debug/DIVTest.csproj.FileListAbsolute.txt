@@ -7,3 +7,8 @@ D:\zj\Mycode\MyTest\DIVTest\bin\Debug\DIVTest.pdb
 D:\zj\Mycode\MyTest\DIVTest\obj\x86\Debug\DIVTest.csprojResolveAssemblyReference.cache
 D:\zj\Mycode\MyTest\DIVTest\obj\x86\Debug\DIVTest.exe
 D:\zj\Mycode\MyTest\DIVTest\obj\x86\Debug\DIVTest.pdb
+E:\Code\MyTest\DIVTest\bin\Debug\DIVTest.exe
+E:\Code\MyTest\DIVTest\bin\Debug\DIVTest.pdb
+E:\Code\MyTest\DIVTest\obj\x86\Debug\DIVTest.csprojResolveAssemblyReference.cache
+E:\Code\MyTest\DIVTest\obj\x86\Debug\DIVTest.exe
+E:\Code\MyTest\DIVTest\obj\x86\Debug\DIVTest.pdb

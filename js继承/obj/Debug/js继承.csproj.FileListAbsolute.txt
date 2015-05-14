@@ -7,3 +7,8 @@ D:\zj\Mycode\MyTest\js继承\bin\js继承.dll
 D:\zj\Mycode\MyTest\js继承\bin\js继承.pdb
 D:\zj\Mycode\MyTest\js继承\obj\Debug\js继承.dll
 D:\zj\Mycode\MyTest\js继承\obj\Debug\js继承.pdb
+E:\Code\MyTest\js继承\bin\js继承.dll.config
+E:\Code\MyTest\js继承\bin\js继承.dll
+E:\Code\MyTest\js继承\bin\js继承.pdb
+E:\Code\MyTest\js继承\obj\Debug\js继承.dll
+E:\Code\MyTest\js继承\obj\Debug\js继承.pdb

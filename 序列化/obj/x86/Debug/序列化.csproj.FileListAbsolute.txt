@@ -7,3 +7,8 @@ D:\zj\Mycode\MyTest\序列化\bin\Debug\序列化.pdb
 D:\zj\Mycode\MyTest\序列化\obj\x86\Debug\序列化.csprojResolveAssemblyReference.cache
 D:\zj\Mycode\MyTest\序列化\obj\x86\Debug\序列化.exe
 D:\zj\Mycode\MyTest\序列化\obj\x86\Debug\序列化.pdb
+E:\Code\MyTest\序列化\bin\Debug\序列化.exe
+E:\Code\MyTest\序列化\bin\Debug\序列化.pdb
+E:\Code\MyTest\序列化\obj\x86\Debug\序列化.csprojResolveAssemblyReference.cache
+E:\Code\MyTest\序列化\obj\x86\Debug\序列化.exe
+E:\Code\MyTest\序列化\obj\x86\Debug\序列化.pdb

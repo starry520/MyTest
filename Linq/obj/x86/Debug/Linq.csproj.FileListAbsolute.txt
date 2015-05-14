@@ -12,3 +12,10 @@ D:\zj\Mycode\MyTest\Linq\bin\Debug\CommClass.pdb
 D:\zj\Mycode\MyTest\Linq\obj\x86\Debug\Linq.csprojResolveAssemblyReference.cache
 D:\zj\Mycode\MyTest\Linq\obj\x86\Debug\Linq.exe
 D:\zj\Mycode\MyTest\Linq\obj\x86\Debug\Linq.pdb
+E:\Code\MyTest\Linq\bin\Debug\Linq.exe
+E:\Code\MyTest\Linq\bin\Debug\Linq.pdb
+E:\Code\MyTest\Linq\bin\Debug\CommClass.dll
+E:\Code\MyTest\Linq\bin\Debug\CommClass.pdb
+E:\Code\MyTest\Linq\obj\x86\Debug\Linq.csprojResolveAssemblyReference.cache
+E:\Code\MyTest\Linq\obj\x86\Debug\Linq.exe
+E:\Code\MyTest\Linq\obj\x86\Debug\Linq.pdb

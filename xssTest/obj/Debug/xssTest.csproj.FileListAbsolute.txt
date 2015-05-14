@@ -11,3 +11,10 @@ D:\zj\Mycode\MyTest\xssTest\bin\AccountCrypt.dll
 D:\zj\Mycode\MyTest\xssTest\obj\Debug\xssTest.csprojResolveAssemblyReference.cache
 D:\zj\Mycode\MyTest\xssTest\obj\Debug\xssTest.dll
 D:\zj\Mycode\MyTest\xssTest\obj\Debug\xssTest.pdb
+E:\Code\MyTest\xssTest\bin\xssTest.dll.config
+E:\Code\MyTest\xssTest\bin\xssTest.dll
+E:\Code\MyTest\xssTest\bin\xssTest.pdb
+E:\Code\MyTest\xssTest\bin\AccountCrypt.dll
+E:\Code\MyTest\xssTest\obj\Debug\xssTest.csprojResolveAssemblyReference.cache
+E:\Code\MyTest\xssTest\obj\Debug\xssTest.dll
+E:\Code\MyTest\xssTest\obj\Debug\xssTest.pdb

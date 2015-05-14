@@ -8,3 +8,8 @@ D:\zj\Mycode\MyTest\电话号码整理1\bin\Debug\电话号码整理1.pdb
 D:\zj\Mycode\MyTest\电话号码整理1\obj\x86\Debug\电话号码整理1.csprojResolveAssemblyReference.cache
 D:\zj\Mycode\MyTest\电话号码整理1\obj\x86\Debug\电话号码整理1.exe
 D:\zj\Mycode\MyTest\电话号码整理1\obj\x86\Debug\电话号码整理1.pdb
+E:\Code\MyTest\电话号码整理1\bin\Debug\电话号码整理1.exe
+E:\Code\MyTest\电话号码整理1\bin\Debug\电话号码整理1.pdb
+E:\Code\MyTest\电话号码整理1\obj\x86\Debug\电话号码整理1.csprojResolveAssemblyReference.cache
+E:\Code\MyTest\电话号码整理1\obj\x86\Debug\电话号码整理1.exe
+E:\Code\MyTest\电话号码整理1\obj\x86\Debug\电话号码整理1.pdb

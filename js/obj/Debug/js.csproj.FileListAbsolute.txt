@@ -7,3 +7,8 @@ D:\zj\Mycode\MyTest\js\bin\js.dll
 D:\zj\Mycode\MyTest\js\bin\js.pdb
 D:\zj\Mycode\MyTest\js\obj\Debug\js.dll
 D:\zj\Mycode\MyTest\js\obj\Debug\js.pdb
+E:\Code\MyTest\js\bin\js.dll.config
+E:\Code\MyTest\js\bin\js.dll
+E:\Code\MyTest\js\bin\js.pdb
+E:\Code\MyTest\js\obj\Debug\js.dll
+E:\Code\MyTest\js\obj\Debug\js.pdb
