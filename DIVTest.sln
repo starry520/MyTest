@@ -42,25 +42,6 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebSite1", "..\..\WebSites\
 		VWDPort = "12766"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		Debug.AspNetCompiler.VirtualPath = "/WebSite1"
-		Debug.AspNetCompiler.PhysicalPath = "..\..\WebSites\WebSite1\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\WebSite1\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/WebSite1"
-		Release.AspNetCompiler.PhysicalPath = "..\..\WebSites\WebSite1\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\WebSite1\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "12766"
-		DefaultWebSiteLanguage = "Visual C#"
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cloneMember", "cloneMember\cloneMember.csproj", "{EB3B8A0E-6D32-491C-A10D-38A6FE277A68}"
 EndProject
@@ -95,6 +76,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "log4netTest", "log4netTest\log4netTest.csproj", "{CD2A6410-EA9B-4C92-9B25-5C69048397A5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log4NWinform", "..\..\jsj\HTML5\testLog4N\testLog4N\testLog4N\Log4NWinform.csproj", "{462BB3D8-37E5-4D6F-B2A9-64D03C80C296}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "log4netWEB", "log4netWEB\log4netWEB.csproj", "{F175DAAD-8B11-413F-ACCB-1BFE6FF73379}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -346,6 +329,16 @@ Global
 		{462BB3D8-37E5-4D6F-B2A9-64D03C80C296}.Release|Mixed Platforms.Build.0 = Release|x86
 		{462BB3D8-37E5-4D6F-B2A9-64D03C80C296}.Release|x86.ActiveCfg = Release|x86
 		{462BB3D8-37E5-4D6F-B2A9-64D03C80C296}.Release|x86.Build.0 = Release|x86
+		{F175DAAD-8B11-413F-ACCB-1BFE6FF73379}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F175DAAD-8B11-413F-ACCB-1BFE6FF73379}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F175DAAD-8B11-413F-ACCB-1BFE6FF73379}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{F175DAAD-8B11-413F-ACCB-1BFE6FF73379}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{F175DAAD-8B11-413F-ACCB-1BFE6FF73379}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F175DAAD-8B11-413F-ACCB-1BFE6FF73379}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F175DAAD-8B11-413F-ACCB-1BFE6FF73379}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F175DAAD-8B11-413F-ACCB-1BFE6FF73379}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{F175DAAD-8B11-413F-ACCB-1BFE6FF73379}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{F175DAAD-8B11-413F-ACCB-1BFE6FF73379}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

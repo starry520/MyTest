@@ -8,24 +8,21 @@ namespace log4netTest
 {
     public class LogHelper
     {
-        public static readonly log4net.ILog loginfo = log4net.LogManager.GetLogger("loginfo");
-
-        public static readonly log4net.ILog logerror = log4net.LogManager.GetLogger("logerror");
-        public static readonly log4net.ILog myLogger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);  
-        public static void WriteLog(string info)
+        public static readonly log4net.ILog myLogger = log4net.LogManager.GetLogger("loginfo");
+  
+        public static void LogInfo(string info)
         {
-
-            if (loginfo.IsInfoEnabled)
+            if (myLogger.IsInfoEnabled)
             {
-                loginfo.Info(info);
+                myLogger.Info(info);
             }
         }
 
-        public static void WriteLog(string info, Exception se)
+        public static void LogError(string info, Exception ex)
         {
-            if (logerror.IsErrorEnabled)
+            if (myLogger.IsErrorEnabled)
             {
-                logerror.Error(info, se);
+                myLogger.Error(info, ex);
             }
         }
     }
