@@ -1,0 +1,2365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="HJSIIModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityType Name="Article">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ArticleCategoryId" Type="int" />
+          <Property Name="BigImage" Type="nvarchar" MaxLength="50" />
+          <Property Name="SmallImage" Type="nvarchar" MaxLength="50" />
+          <Property Name="ArticleTitle" Type="nvarchar" MaxLength="50" />
+          <Property Name="ArticleContent" Type="nvarchar(max)" />
+          <Property Name="IsHot" Type="bit" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ArticleCategory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="CategoryName" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BorrowInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BorrowTitle" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ContractNo" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="BorrowParty" Type="nvarchar" MaxLength="50" />
+          <Property Name="GuaranteeParty" Type="nvarchar" MaxLength="50" />
+          <Property Name="GuaranteeTypeId" Type="int" />
+          <Property Name="BorrowAmount" Type="float" Nullable="false" />
+          <Property Name="FinishAmount" Type="float" Nullable="false" />
+          <Property Name="BorrowDay" Type="int" Nullable="false" />
+          <Property Name="EndDate" Type="datetime" Nullable="false" />
+          <Property Name="Yield" Type="float" Nullable="false" />
+          <Property Name="PayMethodId" Type="int" Nullable="false" />
+          <Property Name="LendRate" Type="float" Nullable="false" />
+          <Property Name="LendRateAmount" Type="float" Nullable="false" />
+          <Property Name="BorrowRate" Type="float" Nullable="false" />
+          <Property Name="BorrowRateAmount" Type="float" Nullable="false" />
+          <Property Name="RaiseBeginDate" Type="datetime" Nullable="false" />
+          <Property Name="RaiseEndDate" Type="datetime" Nullable="false" />
+          <Property Name="MinAmount" Type="float" Nullable="false" />
+          <Property Name="increment" Type="float" Nullable="false" />
+          <Property Name="IsHot" Type="bit" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Status" Type="tinyint" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+          <Property Name="BasicContractNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="BasicBorrowPerson" Type="nvarchar" MaxLength="50" />
+          <Property Name="BasicLoanPerson" Type="nvarchar" MaxLength="50" />
+          <Property Name="BasicLoanStartDate" Type="datetime" />
+          <Property Name="BasicLoanEndDate" Type="datetime" />
+          <Property Name="BasicInterestDate" Type="datetime" />
+          <Property Name="LoanAmount" Type="float" />
+          <Property Name="LoanRate" Type="float" />
+          <Property Name="IsCreate" Type="int" />
+          <Property Name="ProfitTotal" Type="float" />
+        </EntityType>
+        <EntityType Name="BorrowInfo_InvestRecord">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="BorrowInfoId" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Amount" Type="float" Nullable="false" />
+          <Property Name="Yield" Type="float" Nullable="false" />
+          <Property Name="Fee" Type="float" Nullable="false" />
+          <Property Name="Profit" Type="float" Nullable="false" />
+          <Property Name="ActualProfit" Type="float" Nullable="false" />
+          <Property Name="Income" Type="float" Nullable="false" />
+          <Property Name="BorrowDate" Type="datetime" Nullable="false" />
+          <Property Name="InvestStartDate" Type="datetime" />
+          <Property Name="InvestEndDate" Type="datetime" />
+          <Property Name="Status" Type="tinyint" Nullable="false" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContractNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="SSN" Type="nvarchar" MaxLength="7" />
+        </EntityType>
+        <EntityType Name="BorrowInfoOperation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BorrowInfoId" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ActionName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ActionDesc" Type="nvarchar" MaxLength="200" />
+          <Property Name="ActionDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BrokerLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="Thread" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Level" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="Logger" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="Message" Type="varchar" MaxLength="3000" Nullable="false" />
+          <Property Name="Exception" Type="varchar" MaxLength="4000" />
+        </EntityType>
+        <EntityType Name="CommissionLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="Thread" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Level" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="Logger" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="Message" Type="varchar" MaxLength="3000" Nullable="false" />
+          <Property Name="Exception" Type="varchar" MaxLength="4000" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Salt" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="IDNumber" Type="nvarchar" MaxLength="30" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="EmployeeStatus" Type="tinyint" Nullable="false" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
+        <EntityType Name="EmployeeLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmployeeId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="EmployeeName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ActionName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ActionDesc" Type="nvarchar" MaxLength="500" />
+          <Property Name="ActionDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FuiouFundLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="busi_tp" Type="nvarchar" MaxLength="10" />
+          <Property Name="busi_tp_desc" Type="nvarchar" MaxLength="50" />
+          <Property Name="ext_tp" Type="nvarchar" MaxLength="10" />
+          <Property Name="txn_date" Type="nvarchar" MaxLength="20" />
+          <Property Name="txn_time" Type="nvarchar" MaxLength="10" />
+          <Property Name="d_txn_date" Type="datetime" />
+          <Property Name="src_tp" Type="nvarchar" MaxLength="10" />
+          <Property Name="mchnt_ssn" Type="nvarchar" MaxLength="50" />
+          <Property Name="txn_amt" Type="decimal" Precision="12" Scale="0" />
+          <Property Name="txn_amt_suc" Type="decimal" Precision="12" Scale="0" />
+          <Property Name="contract_no" Type="nvarchar" MaxLength="30" />
+          <Property Name="out_fuiou_acct_no" Type="nvarchar" MaxLength="30" />
+          <Property Name="out_cust_no" Type="nvarchar" MaxLength="30" />
+          <Property Name="out_artif_nm" Type="nvarchar" MaxLength="30" />
+          <Property Name="in_fuiou_acct_no" Type="nvarchar" MaxLength="30" />
+          <Property Name="in_cust_no" Type="nvarchar" MaxLength="30" />
+          <Property Name="in_artif_nm" Type="nvarchar" MaxLength="30" />
+          <Property Name="remark" Type="nvarchar" MaxLength="200" />
+          <Property Name="txn_rsp_cd" Type="nvarchar" MaxLength="8" />
+          <Property Name="rsp_cd_desc" Type="nvarchar" MaxLength="500" />
+          <Property Name="OLogId" Type="int" />
+        </EntityType>
+        <EntityType Name="FuiouFundOperationLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StartDate" Type="datetime" Nullable="false" />
+          <Property Name="EndDate" Type="datetime" Nullable="false" />
+          <Property Name="Status" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GuaranteeType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GuaranteeTitle" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="GuaranteeDesc" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="hxb_sys_cfg">
+          <Key>
+            <PropertyRef Name="cfg_id" />
+          </Key>
+          <Property Name="cfg_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="cfg_key" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="cfg_value" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="comment1" Type="nvarchar" MaxLength="50" />
+          <Property Name="comment2" Type="nvarchar" MaxLength="50" />
+          <Property Name="comment3" Type="nvarchar" MaxLength="50" />
+          <Property Name="remark" Type="nvarchar" MaxLength="50" />
+          <Property Name="modifytime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="m_b_brokerinfo">
+          <Key>
+            <PropertyRef Name="brokeruserid" />
+          </Key>
+          <Property Name="brokeruserid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="userimage" Type="varbinary(max)" />
+          <Property Name="mobilephone" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="activetime" Type="datetime" />
+          <Property Name="lockstatus" Type="tinyint" Nullable="false" />
+          <Property Name="createtime" Type="datetime" Nullable="false" />
+          <Property Name="modifytime" Type="datetime" Nullable="false" />
+          <Property Name="brokerlevel" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="m_b_repayinfo">
+          <Key>
+            <PropertyRef Name="brokeruserid" />
+          </Key>
+          <Property Name="brokeruserid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="repayamount" Type="decimal" Precision="12" Scale="2" Nullable="false" />
+          <Property Name="outcash" Type="decimal" Precision="12" Scale="2" Nullable="false" />
+          <Property Name="createtime" Type="datetime" Nullable="false" />
+          <Property Name="modifytime" Type="datetime" Nullable="false" />
+          <Property Name="freezeamount" Type="decimal" Precision="12" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="m_b_repayinfo_detail">
+          <Key>
+            <PropertyRef Name="repayinfodtid" />
+          </Key>
+          <Property Name="repayinfodtid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="brokeruserid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="userid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="repayamount" Type="decimal" Precision="12" Scale="2" Nullable="false" />
+          <Property Name="waitsenddate" Type="int" />
+          <Property Name="activesendtime" Type="datetime" />
+          <Property Name="activesendym" Type="int" />
+          <Property Name="activesenduserid" Type="uniqueidentifier" />
+          <Property Name="investsuccess" Type="tinyint" Nullable="false" />
+          <Property Name="createtime" Type="datetime" Nullable="false" />
+          <Property Name="modifytime" Type="datetime" Nullable="false" />
+          <Property Name="investrecordid" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="m_b_repayinfodtl_manager">
+          <Key>
+            <PropertyRef Name="repayinfodtoperid" />
+          </Key>
+          <Property Name="repayinfodtoperid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="operuserid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="operactivertime" Type="datetime" Nullable="false" />
+          <Property Name="opertype" Type="tinyint" Nullable="false" />
+          <Property Name="operresult" Type="tinyint" Nullable="false" />
+          <Property Name="repayinfodtid" Type="int" Nullable="false" />
+          <Property Name="repayamount" Type="decimal" Precision="12" Scale="2" Nullable="false" />
+          <Property Name="createtime" Type="datetime" Nullable="false" />
+          <Property Name="modifytime" Type="datetime" Nullable="false" />
+          <Property Name="investrecordid" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="m_b_token">
+          <Key>
+            <PropertyRef Name="brokeruserid" />
+          </Key>
+          <Property Name="brokeruserid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="tokenno" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="createtime" Type="datetime" Nullable="false" />
+          <Property Name="modifytime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="m_b_weixin_api">
+          <Key>
+            <PropertyRef Name="brokeruserid" />
+          </Key>
+          <Property Name="brokeruserid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="openid" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="createtime" Type="datetime" Nullable="false" />
+          <Property Name="modifytime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="m_code">
+          <Key>
+            <PropertyRef Name="code_id" />
+          </Key>
+          <Property Name="code_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="code_sort_type" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="value" Type="tinyint" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="disp_no" Type="tinyint" />
+          <Property Name="org_no" Type="nvarchar" MaxLength="16" />
+          <Property Name="p_code" Type="tinyint" />
+          <Property Name="comment1" Type="nvarchar" MaxLength="50" />
+          <Property Name="comment2" Type="nvarchar" MaxLength="50" />
+          <Property Name="comment3" Type="nvarchar" MaxLength="50" />
+          <Property Name="comment4" Type="nvarchar" MaxLength="100" />
+          <Property Name="comment5" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="m_i_userinfo">
+          <Key>
+            <PropertyRef Name="userid" />
+          </Key>
+          <Property Name="userid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="username" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="brokeruserid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="registmode" Type="tinyint" Nullable="false" />
+          <Property Name="mobilephone" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="investstatus" Type="tinyint" Nullable="false" />
+          <Property Name="createtime" Type="datetime" Nullable="false" />
+          <Property Name="modifytime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="m_i_userstatus">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="userid" Type="uniqueidentifier" />
+          <Property Name="brokeruserid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="username" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="mobilephone" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="investstatus" Type="tinyint" Nullable="false" />
+          <Property Name="remark" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="createtime" Type="datetime" Nullable="false" />
+          <Property Name="modifytime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="m_p_apierrcode">
+          <Key>
+            <PropertyRef Name="apierrcodeid" />
+          </Key>
+          <Property Name="apierrcodeid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="apierrcodekey" Type="int" Nullable="false" />
+          <Property Name="apierrcodevalue" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="comment" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="createtime" Type="datetime" Nullable="false" />
+          <Property Name="modifytime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PayMehod">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PayMethodName" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="PowerGroup">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PowerName" Type="varchar" MaxLength="50" />
+          <Property Name="Power" Type="varchar" MaxLength="2000" />
+          <Property Name="Remark" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“HJSII.dbo.regclient”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="regclient">
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="20" />
+        </EntityType>-->
+        <EntityType Name="Repayment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BorrowInfoId" Type="int" Nullable="false" />
+          <Property Name="InvestId" Type="int" Nullable="false" />
+          <Property Name="RepayDate" Type="datetime" Nullable="false" />
+          <Property Name="RepayAmount" Type="float" Nullable="false" />
+          <Property Name="Status" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ResponseCode">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" />
+          <Property Name="ToolTip" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ScoreGet">
+          <Key>
+            <PropertyRef Name="ScoreType" />
+          </Key>
+          <Property Name="ScoreType" Type="int" Nullable="false" />
+          <Property Name="ScoreDesc" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Score" Type="int" />
+        </EntityType>
+        <EntityType Name="SendSMS">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IPAddress" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="PhoneNo" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MsgCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Status" Type="tinyint" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SiteMail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Sender" Type="uniqueidentifier" />
+          <Property Name="SenderName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Reciver" Type="uniqueidentifier" />
+          <Property Name="ReciverName" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsRead" Type="bit" />
+          <Property Name="Title" Type="nvarchar" MaxLength="200" />
+          <Property Name="MsgContent" Type="nvarchar" MaxLength="2000" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="ReadDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="SiteNoIndex">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="SSN" Type="varchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SiteStatistics">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TotalAmount" Type="float" Nullable="false" />
+          <Property Name="TotalCount" Type="int" Nullable="false" />
+          <Property Name="Profit" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SyncFundLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="Thread" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Level" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="Logger" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="Message" Type="varchar" MaxLength="3000" Nullable="false" />
+          <Property Name="Exception" Type="varchar" MaxLength="4000" />
+        </EntityType>
+        <EntityType Name="TransferBuLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="Thread" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Level" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="Logger" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="Message" Type="varchar" MaxLength="3000" Nullable="false" />
+          <Property Name="Exception" Type="varchar" MaxLength="4000" />
+        </EntityType>
+        <EntityType Name="UserDetail">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UAddress" Type="nvarchar" MaxLength="100" />
+          <Property Name="GraduationSchool" Type="nvarchar" MaxLength="50" />
+          <Property Name="Education" Type="nvarchar" MaxLength="50" />
+          <Property Name="CompanyIndustry" Type="nvarchar" MaxLength="50" />
+          <Property Name="CompanySize" Type="nvarchar" MaxLength="50" />
+          <Property Name="MonthIncome" Type="nvarchar" MaxLength="50" />
+          <Property Name="Marry" Type="bit" Nullable="false" />
+          <Property Name="HaveHouse" Type="bit" />
+          <Property Name="HaveCar" Type="bit" />
+          <Property Name="Position" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sex" Type="nchar" MaxLength="1" />
+          <Property Name="SecondLinkMan" Type="nvarchar" MaxLength="50" />
+          <Property Name="EmergencyContactor" Type="nvarchar" MaxLength="50" />
+          <Property Name="EmergencyPhoneNumber" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="UserInfo">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Salt" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="IDNumber" Type="nvarchar" MaxLength="30" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserStatus" Type="tinyint" Nullable="false" />
+          <Property Name="RegisterDate" Type="datetime" Nullable="false" />
+          <Property Name="PreLoginDate" Type="datetime" />
+          <Property Name="LastLoginDate" Type="datetime" Nullable="false" />
+          <Property Name="FailedLoginCount" Type="tinyint" Nullable="false" />
+          <Property Name="UserLevel" Type="tinyint" Nullable="false" />
+          <Property Name="FuiouValid" Type="bit" Nullable="false" />
+          <Property Name="InviteCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="InvitedUserCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="HeadImg" Type="nvarchar(max)" />
+          <Property Name="LoginFaileDate" Type="datetime" />
+          <Property Name="PreviousLoginDate" Type="datetime" />
+          <Property Name="UserScore" Type="float" />
+        </EntityType>
+        <EntityType Name="UserInfo_BankCard">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="BankProvinceId" Type="int" />
+          <Property Name="BankCityId" Type="int" />
+          <Property Name="BankAreaId" Type="int" />
+          <Property Name="BankAddress" Type="nvarchar" MaxLength="200" />
+          <Property Name="BankName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="BankCardNo" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserInfo_Invest">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="TotalAmount" Type="float" Nullable="false" />
+          <Property Name="TotalCount" Type="int" Nullable="false" />
+          <Property Name="CurrentYear" Type="int" Nullable="false" />
+          <Property Name="CurrentMonth" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserInfo_Score">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ScoreType" Type="int" Nullable="false" />
+          <Property Name="Score" Type="int" Nullable="false" />
+          <Property Name="Remain" Type="int" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="UserLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ActionName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ActionDesc" Type="nvarchar" MaxLength="500" />
+          <Property Name="ActionDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“HJSII.dbo.xxxx”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="xxxx">
+          <Property Name="UserId" Type="uniqueidentifier" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="10" />
+          <Property Name="InviteCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="InvitedUserCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="BorrowTitle" Type="nvarchar" MaxLength="50" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="20" />
+          <Property Name="BorrowDate" Type="datetime" />
+          <Property Name="BorrowInfoId" Type="int" />
+          <Property Name="Amount" Type="float" />
+          <Property Name="Status" Type="tinyint" />
+          <Property Name="Status1" Type="tinyint" />
+        </EntityType>-->
+        <Association Name="FK_Article_ArticleCategory">
+          <End Role="ArticleCategory" Type="Self.ArticleCategory" Multiplicity="0..1" />
+          <End Role="Article" Type="Self.Article" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ArticleCategory">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Article">
+              <PropertyRef Name="ArticleCategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BorrowInfo_GuaranteeType">
+          <End Role="GuaranteeType" Type="Self.GuaranteeType" Multiplicity="0..1" />
+          <End Role="BorrowInfo" Type="Self.BorrowInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GuaranteeType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BorrowInfo">
+              <PropertyRef Name="GuaranteeTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BorrowInfo_InvestRecord_BorrowInfo">
+          <End Role="BorrowInfo" Type="Self.BorrowInfo" Multiplicity="1" />
+          <End Role="BorrowInfo_InvestRecord" Type="Self.BorrowInfo_InvestRecord" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BorrowInfo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BorrowInfo_InvestRecord">
+              <PropertyRef Name="BorrowInfoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BorrowInfo_InvestRecord_UserInfo">
+          <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="1" />
+          <End Role="BorrowInfo_InvestRecord" Type="Self.BorrowInfo_InvestRecord" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserInfo">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="BorrowInfo_InvestRecord">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BorrowInfo_PayMehod">
+          <End Role="PayMehod" Type="Self.PayMehod" Multiplicity="1" />
+          <End Role="BorrowInfo" Type="Self.BorrowInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PayMehod">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BorrowInfo">
+              <PropertyRef Name="PayMethodId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BorrowInfoOperation_BorrowInfo">
+          <End Role="BorrowInfo" Type="Self.BorrowInfo" Multiplicity="1" />
+          <End Role="BorrowInfoOperation" Type="Self.BorrowInfoOperation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BorrowInfo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BorrowInfoOperation">
+              <PropertyRef Name="BorrowInfoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserDetail_UserInfo">
+          <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="1" />
+          <End Role="UserDetail" Type="Self.UserDetail" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="UserInfo">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="UserDetail">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserInfo_BankCard_UserInfo">
+          <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="1" />
+          <End Role="UserInfo_BankCard" Type="Self.UserInfo_BankCard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserInfo">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="UserInfo_BankCard">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserInfo_Invest_UserInfo">
+          <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="1" />
+          <End Role="UserInfo_Invest" Type="Self.UserInfo_Invest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserInfo">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="UserInfo_Invest">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserInfo_Score_ScoreGet">
+          <End Role="ScoreGet" Type="Self.ScoreGet" Multiplicity="1" />
+          <End Role="UserInfo_Score" Type="Self.UserInfo_Score" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ScoreGet">
+              <PropertyRef Name="ScoreType" />
+            </Principal>
+            <Dependent Role="UserInfo_Score">
+              <PropertyRef Name="ScoreType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserInfo_Score_UserInfo">
+          <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="1" />
+          <End Role="UserInfo_Score" Type="Self.UserInfo_Score" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserInfo">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="UserInfo_Score">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserLog_UserInfo">
+          <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="1" />
+          <End Role="UserLog" Type="Self.UserLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserInfo">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="UserLog">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="AutoUpdateBorrowStatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="DeleteCurrentMonthRank" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CurrentYear" Type="int" Mode="In" />
+          <Parameter Name="CurrentMonth" Type="int" Mode="In" />
+        </Function>
+        <Function Name="DELETESiteStatics" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="DelFuiouFundLogByOpId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OpId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetBorrowInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CurrentYear" Type="int" Mode="In" />
+          <Parameter Name="CurrentMonth" Type="int" Mode="In" />
+          <Parameter Name="Count" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetInvestAmount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserId" Type="uniqueidentifier" Mode="In" />
+        </Function>
+        <Function Name="GetProductInvestBalances" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="BorrowId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetRankData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="GetSiteStatics" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="InsertProductInvestBalances" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="BorrowInfoId" Type="int" Mode="In" />
+          <Parameter Name="UserId" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="Amount" Type="float" Mode="In" />
+          <Parameter Name="Yield" Type="float" Mode="In" />
+          <Parameter Name="Fee" Type="float" Mode="In" />
+          <Parameter Name="Profit" Type="float" Mode="In" />
+          <Parameter Name="ActualProfit" Type="float" Mode="In" />
+          <Parameter Name="Status" Type="tinyint" Mode="In" />
+          <Parameter Name="ContractNo" Type="nvarchar" Mode="In" />
+          <Parameter Name="SSN" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="InvestRepayUpdateBorrowStatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="BorrowId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="RegScore" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserId" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="ScoreType" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SetBorrowStatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SiteIndex" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="UpdateBorrowAndInvest" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="BorrowId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="UpdateBorrowRecordDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="borrowId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="UpdateInvestStatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="InvestId" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="Status" Type="tinyint" Mode="In" />
+          <Parameter Name="ActualProfit" Type="float" Mode="In" />
+        </Function>
+        <Function Name="UpdateUserInvestStatusByBorrowID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="BorrowID" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="HJSIIModelStoreContainer">
+          <EntitySet Name="Article" EntityType="Self.Article" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ArticleCategory" EntityType="Self.ArticleCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BorrowInfo" EntityType="Self.BorrowInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BorrowInfo_InvestRecord" EntityType="Self.BorrowInfo_InvestRecord" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BorrowInfoOperation" EntityType="Self.BorrowInfoOperation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BrokerLog" EntityType="Self.BrokerLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CommissionLog" EntityType="Self.CommissionLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EmployeeLog" EntityType="Self.EmployeeLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FuiouFundLog" EntityType="Self.FuiouFundLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FuiouFundOperationLog" EntityType="Self.FuiouFundOperationLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GuaranteeType" EntityType="Self.GuaranteeType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="hxb_sys_cfg" EntityType="Self.hxb_sys_cfg" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="m_b_brokerinfo" EntityType="Self.m_b_brokerinfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="m_b_repayinfo" EntityType="Self.m_b_repayinfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="m_b_repayinfo_detail" EntityType="Self.m_b_repayinfo_detail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="m_b_repayinfodtl_manager" EntityType="Self.m_b_repayinfodtl_manager" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="m_b_token" EntityType="Self.m_b_token" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="m_b_weixin_api" EntityType="Self.m_b_weixin_api" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="m_code" EntityType="Self.m_code" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="m_i_userinfo" EntityType="Self.m_i_userinfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="m_i_userstatus" EntityType="Self.m_i_userstatus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="m_p_apierrcode" EntityType="Self.m_p_apierrcode" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PayMehod" EntityType="Self.PayMehod" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PowerGroup" EntityType="Self.PowerGroup" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Repayment" EntityType="Self.Repayment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ResponseCode" EntityType="Self.ResponseCode" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ScoreGet" EntityType="Self.ScoreGet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SendSMS" EntityType="Self.SendSMS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SiteMail" EntityType="Self.SiteMail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SiteNoIndex" EntityType="Self.SiteNoIndex" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SiteStatistics" EntityType="Self.SiteStatistics" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SyncFundLog" EntityType="Self.SyncFundLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TransferBuLog" EntityType="Self.TransferBuLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserDetail" EntityType="Self.UserDetail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserInfo" EntityType="Self.UserInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserInfo_BankCard" EntityType="Self.UserInfo_BankCard" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserInfo_Invest" EntityType="Self.UserInfo_Invest" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserInfo_Score" EntityType="Self.UserInfo_Score" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserLog" EntityType="Self.UserLog" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Article_ArticleCategory" Association="Self.FK_Article_ArticleCategory">
+            <End Role="ArticleCategory" EntitySet="ArticleCategory" />
+            <End Role="Article" EntitySet="Article" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BorrowInfo_GuaranteeType" Association="Self.FK_BorrowInfo_GuaranteeType">
+            <End Role="GuaranteeType" EntitySet="GuaranteeType" />
+            <End Role="BorrowInfo" EntitySet="BorrowInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BorrowInfo_InvestRecord_BorrowInfo" Association="Self.FK_BorrowInfo_InvestRecord_BorrowInfo">
+            <End Role="BorrowInfo" EntitySet="BorrowInfo" />
+            <End Role="BorrowInfo_InvestRecord" EntitySet="BorrowInfo_InvestRecord" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BorrowInfo_InvestRecord_UserInfo" Association="Self.FK_BorrowInfo_InvestRecord_UserInfo">
+            <End Role="UserInfo" EntitySet="UserInfo" />
+            <End Role="BorrowInfo_InvestRecord" EntitySet="BorrowInfo_InvestRecord" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BorrowInfo_PayMehod" Association="Self.FK_BorrowInfo_PayMehod">
+            <End Role="PayMehod" EntitySet="PayMehod" />
+            <End Role="BorrowInfo" EntitySet="BorrowInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BorrowInfoOperation_BorrowInfo" Association="Self.FK_BorrowInfoOperation_BorrowInfo">
+            <End Role="BorrowInfo" EntitySet="BorrowInfo" />
+            <End Role="BorrowInfoOperation" EntitySet="BorrowInfoOperation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserDetail_UserInfo" Association="Self.FK_UserDetail_UserInfo">
+            <End Role="UserInfo" EntitySet="UserInfo" />
+            <End Role="UserDetail" EntitySet="UserDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserInfo_BankCard_UserInfo" Association="Self.FK_UserInfo_BankCard_UserInfo">
+            <End Role="UserInfo" EntitySet="UserInfo" />
+            <End Role="UserInfo_BankCard" EntitySet="UserInfo_BankCard" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserInfo_Invest_UserInfo" Association="Self.FK_UserInfo_Invest_UserInfo">
+            <End Role="UserInfo" EntitySet="UserInfo" />
+            <End Role="UserInfo_Invest" EntitySet="UserInfo_Invest" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserInfo_Score_ScoreGet" Association="Self.FK_UserInfo_Score_ScoreGet">
+            <End Role="ScoreGet" EntitySet="ScoreGet" />
+            <End Role="UserInfo_Score" EntitySet="UserInfo_Score" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserInfo_Score_UserInfo" Association="Self.FK_UserInfo_Score_UserInfo">
+            <End Role="UserInfo" EntitySet="UserInfo" />
+            <End Role="UserInfo_Score" EntitySet="UserInfo_Score" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserLog_UserInfo" Association="Self.FK_UserLog_UserInfo">
+            <End Role="UserInfo" EntitySet="UserInfo" />
+            <End Role="UserLog" EntitySet="UserLog" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HJSIIModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityType Name="Article">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ArticleCategoryId" Type="Int32" />
+          <Property Name="BigImage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SmallImage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ArticleTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ArticleContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsHot" Type="Boolean" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="ArticleCategory" Relationship="Self.FK_Article_ArticleCategory" FromRole="Article" ToRole="ArticleCategory" />
+        </EntityType>
+        <EntityType Name="ArticleCategory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="CategoryName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Article" Relationship="Self.FK_Article_ArticleCategory" FromRole="ArticleCategory" ToRole="Article" />
+        </EntityType>
+        <EntityType Name="BorrowInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BorrowTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ContractNo" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BorrowParty" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GuaranteeParty" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GuaranteeTypeId" Type="Int32" />
+          <Property Name="BorrowAmount" Type="Double" Nullable="false" />
+          <Property Name="FinishAmount" Type="Double" Nullable="false" />
+          <Property Name="BorrowDay" Type="Int32" Nullable="false" />
+          <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Yield" Type="Double" Nullable="false" />
+          <Property Name="PayMethodId" Type="Int32" Nullable="false" />
+          <Property Name="LendRate" Type="Double" Nullable="false" />
+          <Property Name="LendRateAmount" Type="Double" Nullable="false" />
+          <Property Name="BorrowRate" Type="Double" Nullable="false" />
+          <Property Name="BorrowRateAmount" Type="Double" Nullable="false" />
+          <Property Name="RaiseBeginDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="RaiseEndDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="MinAmount" Type="Double" Nullable="false" />
+          <Property Name="increment" Type="Double" Nullable="false" />
+          <Property Name="IsHot" Type="Boolean" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Status" Type="Byte" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="BasicContractNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BasicBorrowPerson" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BasicLoanPerson" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BasicLoanStartDate" Type="DateTime" Precision="3" />
+          <Property Name="BasicLoanEndDate" Type="DateTime" Precision="3" />
+          <Property Name="BasicInterestDate" Type="DateTime" Precision="3" />
+          <Property Name="LoanAmount" Type="Double" />
+          <Property Name="LoanRate" Type="Double" />
+          <Property Name="IsCreate" Type="Int32" />
+          <Property Name="ProfitTotal" Type="Double" />
+          <NavigationProperty Name="GuaranteeType" Relationship="Self.FK_BorrowInfo_GuaranteeType" FromRole="BorrowInfo" ToRole="GuaranteeType" />
+          <NavigationProperty Name="BorrowInfo_InvestRecord" Relationship="Self.FK_BorrowInfo_InvestRecord_BorrowInfo" FromRole="BorrowInfo" ToRole="BorrowInfo_InvestRecord" />
+          <NavigationProperty Name="PayMehod" Relationship="Self.FK_BorrowInfo_PayMehod" FromRole="BorrowInfo" ToRole="PayMehod" />
+          <NavigationProperty Name="BorrowInfoOperation" Relationship="Self.FK_BorrowInfoOperation_BorrowInfo" FromRole="BorrowInfo" ToRole="BorrowInfoOperation" />
+        </EntityType>
+        <EntityType Name="BorrowInfo_InvestRecord">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="BorrowInfoId" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="Guid" Nullable="false" />
+          <Property Name="Amount" Type="Double" Nullable="false" />
+          <Property Name="Yield" Type="Double" Nullable="false" />
+          <Property Name="Fee" Type="Double" Nullable="false" />
+          <Property Name="Profit" Type="Double" Nullable="false" />
+          <Property Name="ActualProfit" Type="Double" Nullable="false" />
+          <Property Name="Income" Type="Double" Nullable="false" />
+          <Property Name="BorrowDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="InvestStartDate" Type="DateTime" Precision="3" />
+          <Property Name="InvestEndDate" Type="DateTime" Precision="3" />
+          <Property Name="Status" Type="Byte" Nullable="false" />
+          <Property Name="Remark" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ContractNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="SSN" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="BorrowInfo" Relationship="Self.FK_BorrowInfo_InvestRecord_BorrowInfo" FromRole="BorrowInfo_InvestRecord" ToRole="BorrowInfo" />
+          <NavigationProperty Name="UserInfo" Relationship="Self.FK_BorrowInfo_InvestRecord_UserInfo" FromRole="BorrowInfo_InvestRecord" ToRole="UserInfo" />
+        </EntityType>
+        <EntityType Name="BorrowInfoOperation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BorrowInfoId" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="Guid" Nullable="false" />
+          <Property Name="ActionName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ActionDesc" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ActionDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="BorrowInfo" Relationship="Self.FK_BorrowInfoOperation_BorrowInfo" FromRole="BorrowInfoOperation" ToRole="BorrowInfo" />
+        </EntityType>
+        <EntityType Name="BrokerLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Thread" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Level" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Logger" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Message" Type="String" MaxLength="3000" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Exception" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="CommissionLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Thread" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Level" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Logger" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Message" Type="String" MaxLength="3000" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Exception" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Salt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FullName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IDNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EmployeeStatus" Type="Byte" Nullable="false" />
+          <Property Name="IsDelete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="EmployeeLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeId" Type="Guid" Nullable="false" />
+          <Property Name="EmployeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ActionName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ActionDesc" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ActionDate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="FuiouFundLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="busi_tp" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="busi_tp_desc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ext_tp" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="txn_date" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="txn_time" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="d_txn_date" Type="DateTime" Precision="3" />
+          <Property Name="src_tp" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mchnt_ssn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="txn_amt" Type="Decimal" Precision="12" Scale="0" />
+          <Property Name="txn_amt_suc" Type="Decimal" Precision="12" Scale="0" />
+          <Property Name="contract_no" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="out_fuiou_acct_no" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="out_cust_no" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="out_artif_nm" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="in_fuiou_acct_no" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="in_cust_no" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="in_artif_nm" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="txn_rsp_cd" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="rsp_cd_desc" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="OLogId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="FuiouFundOperationLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Status" Type="Byte" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GuaranteeType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GuaranteeTitle" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="GuaranteeDesc" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="BorrowInfo" Relationship="Self.FK_BorrowInfo_GuaranteeType" FromRole="GuaranteeType" ToRole="BorrowInfo" />
+        </EntityType>
+        <EntityType Name="hxb_sys_cfg">
+          <Key>
+            <PropertyRef Name="cfg_id" />
+          </Key>
+          <Property Name="cfg_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cfg_key" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="cfg_value" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="comment1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="comment2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="comment3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="remark" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="modifytime" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="m_b_brokerinfo">
+          <Key>
+            <PropertyRef Name="brokeruserid" />
+          </Key>
+          <Property Name="brokeruserid" Type="Guid" Nullable="false" />
+          <Property Name="userimage" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="mobilephone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="activetime" Type="DateTime" Precision="3" />
+          <Property Name="lockstatus" Type="Byte" Nullable="false" />
+          <Property Name="createtime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="modifytime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="brokerlevel" Type="Byte" Nullable="false" />
+        </EntityType>
+        <EntityType Name="m_b_repayinfo">
+          <Key>
+            <PropertyRef Name="brokeruserid" />
+          </Key>
+          <Property Name="brokeruserid" Type="Guid" Nullable="false" />
+          <Property Name="repayamount" Type="Decimal" Precision="12" Scale="2" Nullable="false" />
+          <Property Name="outcash" Type="Decimal" Precision="12" Scale="2" Nullable="false" />
+          <Property Name="createtime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="modifytime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="freezeamount" Type="Decimal" Precision="12" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="m_b_repayinfo_detail">
+          <Key>
+            <PropertyRef Name="repayinfodtid" />
+          </Key>
+          <Property Name="repayinfodtid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="brokeruserid" Type="Guid" Nullable="false" />
+          <Property Name="userid" Type="Guid" Nullable="false" />
+          <Property Name="repayamount" Type="Decimal" Precision="12" Scale="2" Nullable="false" />
+          <Property Name="waitsenddate" Type="Int32" />
+          <Property Name="activesendtime" Type="DateTime" Precision="3" />
+          <Property Name="activesendym" Type="Int32" />
+          <Property Name="activesenduserid" Type="Guid" />
+          <Property Name="investsuccess" Type="Byte" Nullable="false" />
+          <Property Name="createtime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="modifytime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="investrecordid" Type="Guid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="m_b_repayinfodtl_manager">
+          <Key>
+            <PropertyRef Name="repayinfodtoperid" />
+          </Key>
+          <Property Name="repayinfodtoperid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="operuserid" Type="Guid" Nullable="false" />
+          <Property Name="operactivertime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="opertype" Type="Byte" Nullable="false" />
+          <Property Name="operresult" Type="Byte" Nullable="false" />
+          <Property Name="repayinfodtid" Type="Int32" Nullable="false" />
+          <Property Name="repayamount" Type="Decimal" Precision="12" Scale="2" Nullable="false" />
+          <Property Name="createtime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="modifytime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="investrecordid" Type="Guid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="m_b_token">
+          <Key>
+            <PropertyRef Name="brokeruserid" />
+          </Key>
+          <Property Name="brokeruserid" Type="Guid" Nullable="false" />
+          <Property Name="tokenno" Type="Guid" Nullable="false" />
+          <Property Name="createtime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="modifytime" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="m_b_weixin_api">
+          <Key>
+            <PropertyRef Name="brokeruserid" />
+          </Key>
+          <Property Name="brokeruserid" Type="Guid" Nullable="false" />
+          <Property Name="openid" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="createtime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="modifytime" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="m_code">
+          <Key>
+            <PropertyRef Name="code_id" />
+          </Key>
+          <Property Name="code_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="code_sort_type" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="value" Type="Byte" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="disp_no" Type="Byte" />
+          <Property Name="org_no" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="p_code" Type="Byte" />
+          <Property Name="comment1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="comment2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="comment3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="comment4" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="comment5" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="m_i_userinfo">
+          <Key>
+            <PropertyRef Name="userid" />
+          </Key>
+          <Property Name="userid" Type="Guid" Nullable="false" />
+          <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="brokeruserid" Type="Guid" Nullable="false" />
+          <Property Name="registmode" Type="Byte" Nullable="false" />
+          <Property Name="mobilephone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="investstatus" Type="Byte" Nullable="false" />
+          <Property Name="createtime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="modifytime" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="m_i_userstatus">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="userid" Type="Guid" />
+          <Property Name="brokeruserid" Type="Guid" Nullable="false" />
+          <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mobilephone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="investstatus" Type="Byte" Nullable="false" />
+          <Property Name="remark" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="createtime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="modifytime" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="m_p_apierrcode">
+          <Key>
+            <PropertyRef Name="apierrcodeid" />
+          </Key>
+          <Property Name="apierrcodeid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="apierrcodekey" Type="Int32" Nullable="false" />
+          <Property Name="apierrcodevalue" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="comment" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="createtime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="modifytime" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="PayMehod">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PayMethodName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="BorrowInfo" Relationship="Self.FK_BorrowInfo_PayMehod" FromRole="PayMehod" ToRole="BorrowInfo" />
+        </EntityType>
+        <EntityType Name="PowerGroup">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PowerName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Power" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="Remark" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Repayment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BorrowInfoId" Type="Int32" Nullable="false" />
+          <Property Name="InvestId" Type="Int32" Nullable="false" />
+          <Property Name="RepayDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="RepayAmount" Type="Double" Nullable="false" />
+          <Property Name="Status" Type="Byte" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ResponseCode">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ToolTip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ScoreGet">
+          <Key>
+            <PropertyRef Name="ScoreType" />
+          </Key>
+          <Property Name="ScoreType" Type="Int32" Nullable="false" />
+          <Property Name="ScoreDesc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Score" Type="Int32" />
+          <NavigationProperty Name="UserInfo_Score" Relationship="Self.FK_UserInfo_Score_ScoreGet" FromRole="ScoreGet" ToRole="UserInfo_Score" />
+        </EntityType>
+        <EntityType Name="SendSMS">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IPAddress" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PhoneNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MsgCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Status" Type="Byte" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="SiteMail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Sender" Type="Guid" />
+          <Property Name="SenderName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Reciver" Type="Guid" />
+          <Property Name="ReciverName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsRead" Type="Boolean" />
+          <Property Name="Title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="MsgContent" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+          <Property Name="ReadDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="SiteNoIndex">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="SSN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SiteStatistics">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TotalAmount" Type="Double" Nullable="false" />
+          <Property Name="TotalCount" Type="Int32" Nullable="false" />
+          <Property Name="Profit" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SyncFundLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Thread" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Level" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Logger" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Message" Type="String" MaxLength="3000" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Exception" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TransferBuLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Thread" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Level" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Logger" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Message" Type="String" MaxLength="3000" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Exception" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="UserDetail">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Guid" Nullable="false" />
+          <Property Name="UAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="GraduationSchool" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Education" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CompanyIndustry" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CompanySize" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MonthIncome" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Marry" Type="Boolean" Nullable="false" />
+          <Property Name="HaveHouse" Type="Boolean" />
+          <Property Name="HaveCar" Type="Boolean" />
+          <Property Name="Position" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Sex" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="SecondLinkMan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EmergencyContactor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EmergencyPhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="UserInfo" Relationship="Self.FK_UserDetail_UserInfo" FromRole="UserDetail" ToRole="UserInfo" />
+        </EntityType>
+        <EntityType Name="UserInfo">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Guid" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Salt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FullName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IDNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserStatus" Type="Byte" Nullable="false" />
+          <Property Name="RegisterDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PreLoginDate" Type="DateTime" Precision="3" />
+          <Property Name="LastLoginDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FailedLoginCount" Type="Byte" Nullable="false" />
+          <Property Name="UserLevel" Type="Byte" Nullable="false" />
+          <Property Name="FuiouValid" Type="Boolean" Nullable="false" />
+          <Property Name="InviteCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="InvitedUserCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="HeadImg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LoginFaileDate" Type="DateTime" Precision="3" />
+          <Property Name="PreviousLoginDate" Type="DateTime" Precision="3" />
+          <Property Name="UserScore" Type="Double" />
+          <NavigationProperty Name="BorrowInfo_InvestRecord" Relationship="Self.FK_BorrowInfo_InvestRecord_UserInfo" FromRole="UserInfo" ToRole="BorrowInfo_InvestRecord" />
+          <NavigationProperty Name="UserDetail" Relationship="Self.FK_UserDetail_UserInfo" FromRole="UserInfo" ToRole="UserDetail" />
+          <NavigationProperty Name="UserInfo_BankCard" Relationship="Self.FK_UserInfo_BankCard_UserInfo" FromRole="UserInfo" ToRole="UserInfo_BankCard" />
+          <NavigationProperty Name="UserInfo_Invest" Relationship="Self.FK_UserInfo_Invest_UserInfo" FromRole="UserInfo" ToRole="UserInfo_Invest" />
+          <NavigationProperty Name="UserInfo_Score" Relationship="Self.FK_UserInfo_Score_UserInfo" FromRole="UserInfo" ToRole="UserInfo_Score" />
+          <NavigationProperty Name="UserLog" Relationship="Self.FK_UserLog_UserInfo" FromRole="UserInfo" ToRole="UserLog" />
+        </EntityType>
+        <EntityType Name="UserInfo_BankCard">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Guid" Nullable="false" />
+          <Property Name="BankProvinceId" Type="Int32" />
+          <Property Name="BankCityId" Type="Int32" />
+          <Property Name="BankAreaId" Type="Int32" />
+          <Property Name="BankAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="BankName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BankCardNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="UserInfo" Relationship="Self.FK_UserInfo_BankCard_UserInfo" FromRole="UserInfo_BankCard" ToRole="UserInfo" />
+        </EntityType>
+        <EntityType Name="UserInfo_Invest">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Guid" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TotalAmount" Type="Double" Nullable="false" />
+          <Property Name="TotalCount" Type="Int32" Nullable="false" />
+          <Property Name="CurrentYear" Type="Int32" Nullable="false" />
+          <Property Name="CurrentMonth" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="UserInfo" Relationship="Self.FK_UserInfo_Invest_UserInfo" FromRole="UserInfo_Invest" ToRole="UserInfo" />
+        </EntityType>
+        <EntityType Name="UserInfo_Score">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Guid" Nullable="false" />
+          <Property Name="ScoreType" Type="Int32" Nullable="false" />
+          <Property Name="Score" Type="Int32" Nullable="false" />
+          <Property Name="Remain" Type="Int32" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ScoreGet" Relationship="Self.FK_UserInfo_Score_ScoreGet" FromRole="UserInfo_Score" ToRole="ScoreGet" />
+          <NavigationProperty Name="UserInfo" Relationship="Self.FK_UserInfo_Score_UserInfo" FromRole="UserInfo_Score" ToRole="UserInfo" />
+        </EntityType>
+        <EntityType Name="UserLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Guid" Nullable="false" />
+          <Property Name="ActionName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ActionDesc" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ActionDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="UserInfo" Relationship="Self.FK_UserLog_UserInfo" FromRole="UserLog" ToRole="UserInfo" />
+        </EntityType>
+        <Association Name="FK_Article_ArticleCategory">
+          <End Role="ArticleCategory" Type="Self.ArticleCategory" Multiplicity="0..1" />
+          <End Role="Article" Type="Self.Article" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ArticleCategory">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Article">
+              <PropertyRef Name="ArticleCategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BorrowInfo_GuaranteeType">
+          <End Role="GuaranteeType" Type="Self.GuaranteeType" Multiplicity="0..1" />
+          <End Role="BorrowInfo" Type="Self.BorrowInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GuaranteeType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BorrowInfo">
+              <PropertyRef Name="GuaranteeTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BorrowInfo_InvestRecord_BorrowInfo">
+          <End Role="BorrowInfo" Type="Self.BorrowInfo" Multiplicity="1" />
+          <End Role="BorrowInfo_InvestRecord" Type="Self.BorrowInfo_InvestRecord" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BorrowInfo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BorrowInfo_InvestRecord">
+              <PropertyRef Name="BorrowInfoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BorrowInfo_PayMehod">
+          <End Role="PayMehod" Type="Self.PayMehod" Multiplicity="1" />
+          <End Role="BorrowInfo" Type="Self.BorrowInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PayMehod">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BorrowInfo">
+              <PropertyRef Name="PayMethodId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BorrowInfoOperation_BorrowInfo">
+          <End Role="BorrowInfo" Type="Self.BorrowInfo" Multiplicity="1" />
+          <End Role="BorrowInfoOperation" Type="Self.BorrowInfoOperation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BorrowInfo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BorrowInfoOperation">
+              <PropertyRef Name="BorrowInfoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BorrowInfo_InvestRecord_UserInfo">
+          <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="1" />
+          <End Role="BorrowInfo_InvestRecord" Type="Self.BorrowInfo_InvestRecord" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserInfo">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="BorrowInfo_InvestRecord">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserInfo_Score_ScoreGet">
+          <End Role="ScoreGet" Type="Self.ScoreGet" Multiplicity="1" />
+          <End Role="UserInfo_Score" Type="Self.UserInfo_Score" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ScoreGet">
+              <PropertyRef Name="ScoreType" />
+            </Principal>
+            <Dependent Role="UserInfo_Score">
+              <PropertyRef Name="ScoreType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserDetail_UserInfo">
+          <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="1" />
+          <End Role="UserDetail" Type="Self.UserDetail" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="UserInfo">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="UserDetail">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserInfo_BankCard_UserInfo">
+          <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="1" />
+          <End Role="UserInfo_BankCard" Type="Self.UserInfo_BankCard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserInfo">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="UserInfo_BankCard">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserInfo_Invest_UserInfo">
+          <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="1" />
+          <End Role="UserInfo_Invest" Type="Self.UserInfo_Invest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserInfo">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="UserInfo_Invest">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserInfo_Score_UserInfo">
+          <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="1" />
+          <End Role="UserInfo_Score" Type="Self.UserInfo_Score" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserInfo">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="UserInfo_Score">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserLog_UserInfo">
+          <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="1" />
+          <End Role="UserLog" Type="Self.UserLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserInfo">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="UserLog">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="HJSIIEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Article" EntityType="Self.Article" />
+          <EntitySet Name="ArticleCategory" EntityType="Self.ArticleCategory" />
+          <EntitySet Name="BorrowInfo" EntityType="Self.BorrowInfo" />
+          <EntitySet Name="BorrowInfo_InvestRecord" EntityType="Self.BorrowInfo_InvestRecord" />
+          <EntitySet Name="BorrowInfoOperation" EntityType="Self.BorrowInfoOperation" />
+          <EntitySet Name="BrokerLog" EntityType="Self.BrokerLog" />
+          <EntitySet Name="CommissionLog" EntityType="Self.CommissionLog" />
+          <EntitySet Name="Employee" EntityType="Self.Employee" />
+          <EntitySet Name="EmployeeLog" EntityType="Self.EmployeeLog" />
+          <EntitySet Name="FuiouFundLog" EntityType="Self.FuiouFundLog" />
+          <EntitySet Name="FuiouFundOperationLog" EntityType="Self.FuiouFundOperationLog" />
+          <EntitySet Name="GuaranteeType" EntityType="Self.GuaranteeType" />
+          <EntitySet Name="hxb_sys_cfg" EntityType="Self.hxb_sys_cfg" />
+          <EntitySet Name="m_b_brokerinfo" EntityType="Self.m_b_brokerinfo" />
+          <EntitySet Name="m_b_repayinfo" EntityType="Self.m_b_repayinfo" />
+          <EntitySet Name="m_b_repayinfo_detail" EntityType="Self.m_b_repayinfo_detail" />
+          <EntitySet Name="m_b_repayinfodtl_manager" EntityType="Self.m_b_repayinfodtl_manager" />
+          <EntitySet Name="m_b_token" EntityType="Self.m_b_token" />
+          <EntitySet Name="m_b_weixin_api" EntityType="Self.m_b_weixin_api" />
+          <EntitySet Name="m_code" EntityType="Self.m_code" />
+          <EntitySet Name="m_i_userinfo" EntityType="Self.m_i_userinfo" />
+          <EntitySet Name="m_i_userstatus" EntityType="Self.m_i_userstatus" />
+          <EntitySet Name="m_p_apierrcode" EntityType="Self.m_p_apierrcode" />
+          <EntitySet Name="PayMehod" EntityType="Self.PayMehod" />
+          <EntitySet Name="PowerGroup" EntityType="Self.PowerGroup" />
+          <EntitySet Name="Repayment" EntityType="Self.Repayment" />
+          <EntitySet Name="ResponseCode" EntityType="Self.ResponseCode" />
+          <EntitySet Name="ScoreGet" EntityType="Self.ScoreGet" />
+          <EntitySet Name="SendSMS" EntityType="Self.SendSMS" />
+          <EntitySet Name="SiteMail" EntityType="Self.SiteMail" />
+          <EntitySet Name="SiteNoIndex" EntityType="Self.SiteNoIndex" />
+          <EntitySet Name="SiteStatistics" EntityType="Self.SiteStatistics" />
+          <EntitySet Name="SyncFundLog" EntityType="Self.SyncFundLog" />
+          <EntitySet Name="TransferBuLog" EntityType="Self.TransferBuLog" />
+          <EntitySet Name="UserDetail" EntityType="Self.UserDetail" />
+          <EntitySet Name="UserInfo" EntityType="Self.UserInfo" />
+          <EntitySet Name="UserInfo_BankCard" EntityType="Self.UserInfo_BankCard" />
+          <EntitySet Name="UserInfo_Invest" EntityType="Self.UserInfo_Invest" />
+          <EntitySet Name="UserInfo_Score" EntityType="Self.UserInfo_Score" />
+          <EntitySet Name="UserLog" EntityType="Self.UserLog" />
+          <AssociationSet Name="FK_Article_ArticleCategory" Association="Self.FK_Article_ArticleCategory">
+            <End Role="ArticleCategory" EntitySet="ArticleCategory" />
+            <End Role="Article" EntitySet="Article" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BorrowInfo_GuaranteeType" Association="Self.FK_BorrowInfo_GuaranteeType">
+            <End Role="GuaranteeType" EntitySet="GuaranteeType" />
+            <End Role="BorrowInfo" EntitySet="BorrowInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BorrowInfo_InvestRecord_BorrowInfo" Association="Self.FK_BorrowInfo_InvestRecord_BorrowInfo">
+            <End Role="BorrowInfo" EntitySet="BorrowInfo" />
+            <End Role="BorrowInfo_InvestRecord" EntitySet="BorrowInfo_InvestRecord" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BorrowInfo_PayMehod" Association="Self.FK_BorrowInfo_PayMehod">
+            <End Role="PayMehod" EntitySet="PayMehod" />
+            <End Role="BorrowInfo" EntitySet="BorrowInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BorrowInfoOperation_BorrowInfo" Association="Self.FK_BorrowInfoOperation_BorrowInfo">
+            <End Role="BorrowInfo" EntitySet="BorrowInfo" />
+            <End Role="BorrowInfoOperation" EntitySet="BorrowInfoOperation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BorrowInfo_InvestRecord_UserInfo" Association="Self.FK_BorrowInfo_InvestRecord_UserInfo">
+            <End Role="UserInfo" EntitySet="UserInfo" />
+            <End Role="BorrowInfo_InvestRecord" EntitySet="BorrowInfo_InvestRecord" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserInfo_Score_ScoreGet" Association="Self.FK_UserInfo_Score_ScoreGet">
+            <End Role="ScoreGet" EntitySet="ScoreGet" />
+            <End Role="UserInfo_Score" EntitySet="UserInfo_Score" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserDetail_UserInfo" Association="Self.FK_UserDetail_UserInfo">
+            <End Role="UserInfo" EntitySet="UserInfo" />
+            <End Role="UserDetail" EntitySet="UserDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserInfo_BankCard_UserInfo" Association="Self.FK_UserInfo_BankCard_UserInfo">
+            <End Role="UserInfo" EntitySet="UserInfo" />
+            <End Role="UserInfo_BankCard" EntitySet="UserInfo_BankCard" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserInfo_Invest_UserInfo" Association="Self.FK_UserInfo_Invest_UserInfo">
+            <End Role="UserInfo" EntitySet="UserInfo" />
+            <End Role="UserInfo_Invest" EntitySet="UserInfo_Invest" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserInfo_Score_UserInfo" Association="Self.FK_UserInfo_Score_UserInfo">
+            <End Role="UserInfo" EntitySet="UserInfo" />
+            <End Role="UserInfo_Score" EntitySet="UserInfo_Score" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserLog_UserInfo" Association="Self.FK_UserLog_UserInfo">
+            <End Role="UserInfo" EntitySet="UserInfo" />
+            <End Role="UserLog" EntitySet="UserLog" />
+          </AssociationSet>
+          <FunctionImport Name="AutoUpdateBorrowStatus" />
+          <FunctionImport Name="DeleteCurrentMonthRank">
+            <Parameter Name="CurrentYear" Mode="In" Type="Int32" />
+            <Parameter Name="CurrentMonth" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="DELETESiteStatics" />
+          <FunctionImport Name="DelFuiouFundLogByOpId">
+            <Parameter Name="OpId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetBorrowInfo" ReturnType="Collection(HJSIIModel.GetBorrowInfo_Result)">
+            <Parameter Name="CurrentYear" Mode="In" Type="Int32" />
+            <Parameter Name="CurrentMonth" Mode="In" Type="Int32" />
+            <Parameter Name="Count" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetInvestAmount" ReturnType="Collection(Double)">
+            <Parameter Name="UserId" Mode="In" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="GetProductInvestBalances" ReturnType="Collection(Double)">
+            <Parameter Name="BorrowId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetRankData" ReturnType="Collection(HJSIIModel.GetRankData_Result)" />
+          <FunctionImport Name="GetSiteStatics" ReturnType="Collection(HJSIIModel.GetSiteStatics_Result)" />
+          <FunctionImport Name="InsertProductInvestBalances">
+            <Parameter Name="BorrowInfoId" Mode="In" Type="Int32" />
+            <Parameter Name="UserId" Mode="In" Type="Guid" />
+            <Parameter Name="Amount" Mode="In" Type="Double" />
+            <Parameter Name="Yield" Mode="In" Type="Double" />
+            <Parameter Name="Fee" Mode="In" Type="Double" />
+            <Parameter Name="Profit" Mode="In" Type="Double" />
+            <Parameter Name="ActualProfit" Mode="In" Type="Double" />
+            <Parameter Name="Status" Mode="In" Type="Byte" />
+            <Parameter Name="ContractNo" Mode="In" Type="String" />
+            <Parameter Name="SSN" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="InvestRepayUpdateBorrowStatus">
+            <Parameter Name="BorrowId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="RegScore">
+            <Parameter Name="UserId" Mode="In" Type="Guid" />
+            <Parameter Name="ScoreType" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SetBorrowStatus" />
+          <FunctionImport Name="SiteIndex" ReturnType="Collection(String)">
+            <Parameter Name="Id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="UpdateBorrowAndInvest">
+            <Parameter Name="BorrowId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="UpdateBorrowRecordDate">
+            <Parameter Name="borrowId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="UpdateInvestStatus">
+            <Parameter Name="InvestId" Mode="In" Type="Guid" />
+            <Parameter Name="Status" Mode="In" Type="Byte" />
+            <Parameter Name="ActualProfit" Mode="In" Type="Double" />
+          </FunctionImport>
+          <FunctionImport Name="UpdateUserInvestStatusByBorrowID">
+            <Parameter Name="BorrowID" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="GetBorrowInfo_Result">
+          <Property Type="Double" Name="TotalAmount" Nullable="true" />
+          <Property Type="Guid" Name="UserId" Nullable="false" />
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="TotalCount" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="GetRankData_Result">
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="50" />
+          <Property Type="Double" Name="Amount" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="GetSiteStatics_Result">
+          <Property Type="Double" Name="amount" Nullable="true" />
+          <Property Type="Int32" Name="count" Nullable="true" />
+          <Property Type="Double" Name="profit" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HJSIIModelStoreContainer" CdmEntityContainer="HJSIIEntities">
+          <EntitySetMapping Name="Article">
+            <EntityTypeMapping TypeName="HJSIIModel.Article">
+              <MappingFragment StoreEntitySet="Article">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ArticleCategoryId" ColumnName="ArticleCategoryId" />
+                <ScalarProperty Name="BigImage" ColumnName="BigImage" />
+                <ScalarProperty Name="SmallImage" ColumnName="SmallImage" />
+                <ScalarProperty Name="ArticleTitle" ColumnName="ArticleTitle" />
+                <ScalarProperty Name="ArticleContent" ColumnName="ArticleContent" />
+                <ScalarProperty Name="IsHot" ColumnName="IsHot" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ArticleCategory">
+            <EntityTypeMapping TypeName="HJSIIModel.ArticleCategory">
+              <MappingFragment StoreEntitySet="ArticleCategory">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BorrowInfo">
+            <EntityTypeMapping TypeName="HJSIIModel.BorrowInfo">
+              <MappingFragment StoreEntitySet="BorrowInfo">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="BorrowTitle" ColumnName="BorrowTitle" />
+                <ScalarProperty Name="ContractNo" ColumnName="ContractNo" />
+                <ScalarProperty Name="BorrowParty" ColumnName="BorrowParty" />
+                <ScalarProperty Name="GuaranteeParty" ColumnName="GuaranteeParty" />
+                <ScalarProperty Name="GuaranteeTypeId" ColumnName="GuaranteeTypeId" />
+                <ScalarProperty Name="BorrowAmount" ColumnName="BorrowAmount" />
+                <ScalarProperty Name="FinishAmount" ColumnName="FinishAmount" />
+                <ScalarProperty Name="BorrowDay" ColumnName="BorrowDay" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="Yield" ColumnName="Yield" />
+                <ScalarProperty Name="PayMethodId" ColumnName="PayMethodId" />
+                <ScalarProperty Name="LendRate" ColumnName="LendRate" />
+                <ScalarProperty Name="LendRateAmount" ColumnName="LendRateAmount" />
+                <ScalarProperty Name="BorrowRate" ColumnName="BorrowRate" />
+                <ScalarProperty Name="BorrowRateAmount" ColumnName="BorrowRateAmount" />
+                <ScalarProperty Name="RaiseBeginDate" ColumnName="RaiseBeginDate" />
+                <ScalarProperty Name="RaiseEndDate" ColumnName="RaiseEndDate" />
+                <ScalarProperty Name="MinAmount" ColumnName="MinAmount" />
+                <ScalarProperty Name="increment" ColumnName="increment" />
+                <ScalarProperty Name="IsHot" ColumnName="IsHot" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="BasicContractNo" ColumnName="BasicContractNo" />
+                <ScalarProperty Name="BasicBorrowPerson" ColumnName="BasicBorrowPerson" />
+                <ScalarProperty Name="BasicLoanPerson" ColumnName="BasicLoanPerson" />
+                <ScalarProperty Name="BasicLoanStartDate" ColumnName="BasicLoanStartDate" />
+                <ScalarProperty Name="BasicLoanEndDate" ColumnName="BasicLoanEndDate" />
+                <ScalarProperty Name="BasicInterestDate" ColumnName="BasicInterestDate" />
+                <ScalarProperty Name="LoanAmount" ColumnName="LoanAmount" />
+                <ScalarProperty Name="LoanRate" ColumnName="LoanRate" />
+                <ScalarProperty Name="IsCreate" ColumnName="IsCreate" />
+                <ScalarProperty Name="ProfitTotal" ColumnName="ProfitTotal" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BorrowInfo_InvestRecord">
+            <EntityTypeMapping TypeName="HJSIIModel.BorrowInfo_InvestRecord">
+              <MappingFragment StoreEntitySet="BorrowInfo_InvestRecord">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="BorrowInfoId" ColumnName="BorrowInfoId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Yield" ColumnName="Yield" />
+                <ScalarProperty Name="Fee" ColumnName="Fee" />
+                <ScalarProperty Name="Profit" ColumnName="Profit" />
+                <ScalarProperty Name="ActualProfit" ColumnName="ActualProfit" />
+                <ScalarProperty Name="Income" ColumnName="Income" />
+                <ScalarProperty Name="BorrowDate" ColumnName="BorrowDate" />
+                <ScalarProperty Name="InvestStartDate" ColumnName="InvestStartDate" />
+                <ScalarProperty Name="InvestEndDate" ColumnName="InvestEndDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="ContractNo" ColumnName="ContractNo" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="SSN" ColumnName="SSN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BorrowInfoOperation">
+            <EntityTypeMapping TypeName="HJSIIModel.BorrowInfoOperation">
+              <MappingFragment StoreEntitySet="BorrowInfoOperation">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="BorrowInfoId" ColumnName="BorrowInfoId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="ActionName" ColumnName="ActionName" />
+                <ScalarProperty Name="ActionDesc" ColumnName="ActionDesc" />
+                <ScalarProperty Name="ActionDate" ColumnName="ActionDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BrokerLog">
+            <EntityTypeMapping TypeName="HJSIIModel.BrokerLog">
+              <MappingFragment StoreEntitySet="BrokerLog">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Thread" ColumnName="Thread" />
+                <ScalarProperty Name="Level" ColumnName="Level" />
+                <ScalarProperty Name="Logger" ColumnName="Logger" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Exception" ColumnName="Exception" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CommissionLog">
+            <EntityTypeMapping TypeName="HJSIIModel.CommissionLog">
+              <MappingFragment StoreEntitySet="CommissionLog">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Thread" ColumnName="Thread" />
+                <ScalarProperty Name="Level" ColumnName="Level" />
+                <ScalarProperty Name="Logger" ColumnName="Logger" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Exception" ColumnName="Exception" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employee">
+            <EntityTypeMapping TypeName="HJSIIModel.Employee">
+              <MappingFragment StoreEntitySet="Employee">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Salt" ColumnName="Salt" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="IDNumber" ColumnName="IDNumber" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="EmployeeStatus" ColumnName="EmployeeStatus" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmployeeLog">
+            <EntityTypeMapping TypeName="HJSIIModel.EmployeeLog">
+              <MappingFragment StoreEntitySet="EmployeeLog">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+                <ScalarProperty Name="ActionName" ColumnName="ActionName" />
+                <ScalarProperty Name="ActionDesc" ColumnName="ActionDesc" />
+                <ScalarProperty Name="ActionDate" ColumnName="ActionDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FuiouFundLog">
+            <EntityTypeMapping TypeName="HJSIIModel.FuiouFundLog">
+              <MappingFragment StoreEntitySet="FuiouFundLog">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="busi_tp" ColumnName="busi_tp" />
+                <ScalarProperty Name="busi_tp_desc" ColumnName="busi_tp_desc" />
+                <ScalarProperty Name="ext_tp" ColumnName="ext_tp" />
+                <ScalarProperty Name="txn_date" ColumnName="txn_date" />
+                <ScalarProperty Name="txn_time" ColumnName="txn_time" />
+                <ScalarProperty Name="d_txn_date" ColumnName="d_txn_date" />
+                <ScalarProperty Name="src_tp" ColumnName="src_tp" />
+                <ScalarProperty Name="mchnt_ssn" ColumnName="mchnt_ssn" />
+                <ScalarProperty Name="txn_amt" ColumnName="txn_amt" />
+                <ScalarProperty Name="txn_amt_suc" ColumnName="txn_amt_suc" />
+                <ScalarProperty Name="contract_no" ColumnName="contract_no" />
+                <ScalarProperty Name="out_fuiou_acct_no" ColumnName="out_fuiou_acct_no" />
+                <ScalarProperty Name="out_cust_no" ColumnName="out_cust_no" />
+                <ScalarProperty Name="out_artif_nm" ColumnName="out_artif_nm" />
+                <ScalarProperty Name="in_fuiou_acct_no" ColumnName="in_fuiou_acct_no" />
+                <ScalarProperty Name="in_cust_no" ColumnName="in_cust_no" />
+                <ScalarProperty Name="in_artif_nm" ColumnName="in_artif_nm" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="txn_rsp_cd" ColumnName="txn_rsp_cd" />
+                <ScalarProperty Name="rsp_cd_desc" ColumnName="rsp_cd_desc" />
+                <ScalarProperty Name="OLogId" ColumnName="OLogId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FuiouFundOperationLog">
+            <EntityTypeMapping TypeName="HJSIIModel.FuiouFundOperationLog">
+              <MappingFragment StoreEntitySet="FuiouFundOperationLog">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GuaranteeType">
+            <EntityTypeMapping TypeName="HJSIIModel.GuaranteeType">
+              <MappingFragment StoreEntitySet="GuaranteeType">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="GuaranteeTitle" ColumnName="GuaranteeTitle" />
+                <ScalarProperty Name="GuaranteeDesc" ColumnName="GuaranteeDesc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hxb_sys_cfg">
+            <EntityTypeMapping TypeName="HJSIIModel.hxb_sys_cfg">
+              <MappingFragment StoreEntitySet="hxb_sys_cfg">
+                <ScalarProperty Name="cfg_id" ColumnName="cfg_id" />
+                <ScalarProperty Name="cfg_key" ColumnName="cfg_key" />
+                <ScalarProperty Name="cfg_value" ColumnName="cfg_value" />
+                <ScalarProperty Name="comment1" ColumnName="comment1" />
+                <ScalarProperty Name="comment2" ColumnName="comment2" />
+                <ScalarProperty Name="comment3" ColumnName="comment3" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="modifytime" ColumnName="modifytime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="m_b_brokerinfo">
+            <EntityTypeMapping TypeName="HJSIIModel.m_b_brokerinfo">
+              <MappingFragment StoreEntitySet="m_b_brokerinfo">
+                <ScalarProperty Name="brokeruserid" ColumnName="brokeruserid" />
+                <ScalarProperty Name="userimage" ColumnName="userimage" />
+                <ScalarProperty Name="mobilephone" ColumnName="mobilephone" />
+                <ScalarProperty Name="activetime" ColumnName="activetime" />
+                <ScalarProperty Name="lockstatus" ColumnName="lockstatus" />
+                <ScalarProperty Name="createtime" ColumnName="createtime" />
+                <ScalarProperty Name="modifytime" ColumnName="modifytime" />
+                <ScalarProperty Name="brokerlevel" ColumnName="brokerlevel" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="m_b_repayinfo">
+            <EntityTypeMapping TypeName="HJSIIModel.m_b_repayinfo">
+              <MappingFragment StoreEntitySet="m_b_repayinfo">
+                <ScalarProperty Name="brokeruserid" ColumnName="brokeruserid" />
+                <ScalarProperty Name="repayamount" ColumnName="repayamount" />
+                <ScalarProperty Name="outcash" ColumnName="outcash" />
+                <ScalarProperty Name="createtime" ColumnName="createtime" />
+                <ScalarProperty Name="modifytime" ColumnName="modifytime" />
+                <ScalarProperty Name="freezeamount" ColumnName="freezeamount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="m_b_repayinfo_detail">
+            <EntityTypeMapping TypeName="HJSIIModel.m_b_repayinfo_detail">
+              <MappingFragment StoreEntitySet="m_b_repayinfo_detail">
+                <ScalarProperty Name="repayinfodtid" ColumnName="repayinfodtid" />
+                <ScalarProperty Name="brokeruserid" ColumnName="brokeruserid" />
+                <ScalarProperty Name="userid" ColumnName="userid" />
+                <ScalarProperty Name="repayamount" ColumnName="repayamount" />
+                <ScalarProperty Name="waitsenddate" ColumnName="waitsenddate" />
+                <ScalarProperty Name="activesendtime" ColumnName="activesendtime" />
+                <ScalarProperty Name="activesendym" ColumnName="activesendym" />
+                <ScalarProperty Name="activesenduserid" ColumnName="activesenduserid" />
+                <ScalarProperty Name="investsuccess" ColumnName="investsuccess" />
+                <ScalarProperty Name="createtime" ColumnName="createtime" />
+                <ScalarProperty Name="modifytime" ColumnName="modifytime" />
+                <ScalarProperty Name="investrecordid" ColumnName="investrecordid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="m_b_repayinfodtl_manager">
+            <EntityTypeMapping TypeName="HJSIIModel.m_b_repayinfodtl_manager">
+              <MappingFragment StoreEntitySet="m_b_repayinfodtl_manager">
+                <ScalarProperty Name="repayinfodtoperid" ColumnName="repayinfodtoperid" />
+                <ScalarProperty Name="operuserid" ColumnName="operuserid" />
+                <ScalarProperty Name="operactivertime" ColumnName="operactivertime" />
+                <ScalarProperty Name="opertype" ColumnName="opertype" />
+                <ScalarProperty Name="operresult" ColumnName="operresult" />
+                <ScalarProperty Name="repayinfodtid" ColumnName="repayinfodtid" />
+                <ScalarProperty Name="repayamount" ColumnName="repayamount" />
+                <ScalarProperty Name="createtime" ColumnName="createtime" />
+                <ScalarProperty Name="modifytime" ColumnName="modifytime" />
+                <ScalarProperty Name="investrecordid" ColumnName="investrecordid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="m_b_token">
+            <EntityTypeMapping TypeName="HJSIIModel.m_b_token">
+              <MappingFragment StoreEntitySet="m_b_token">
+                <ScalarProperty Name="brokeruserid" ColumnName="brokeruserid" />
+                <ScalarProperty Name="tokenno" ColumnName="tokenno" />
+                <ScalarProperty Name="createtime" ColumnName="createtime" />
+                <ScalarProperty Name="modifytime" ColumnName="modifytime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="m_b_weixin_api">
+            <EntityTypeMapping TypeName="HJSIIModel.m_b_weixin_api">
+              <MappingFragment StoreEntitySet="m_b_weixin_api">
+                <ScalarProperty Name="brokeruserid" ColumnName="brokeruserid" />
+                <ScalarProperty Name="openid" ColumnName="openid" />
+                <ScalarProperty Name="createtime" ColumnName="createtime" />
+                <ScalarProperty Name="modifytime" ColumnName="modifytime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="m_code">
+            <EntityTypeMapping TypeName="HJSIIModel.m_code">
+              <MappingFragment StoreEntitySet="m_code">
+                <ScalarProperty Name="code_id" ColumnName="code_id" />
+                <ScalarProperty Name="code_sort_type" ColumnName="code_sort_type" />
+                <ScalarProperty Name="value" ColumnName="value" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="disp_no" ColumnName="disp_no" />
+                <ScalarProperty Name="org_no" ColumnName="org_no" />
+                <ScalarProperty Name="p_code" ColumnName="p_code" />
+                <ScalarProperty Name="comment1" ColumnName="comment1" />
+                <ScalarProperty Name="comment2" ColumnName="comment2" />
+                <ScalarProperty Name="comment3" ColumnName="comment3" />
+                <ScalarProperty Name="comment4" ColumnName="comment4" />
+                <ScalarProperty Name="comment5" ColumnName="comment5" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="m_i_userinfo">
+            <EntityTypeMapping TypeName="HJSIIModel.m_i_userinfo">
+              <MappingFragment StoreEntitySet="m_i_userinfo">
+                <ScalarProperty Name="userid" ColumnName="userid" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="brokeruserid" ColumnName="brokeruserid" />
+                <ScalarProperty Name="registmode" ColumnName="registmode" />
+                <ScalarProperty Name="mobilephone" ColumnName="mobilephone" />
+                <ScalarProperty Name="investstatus" ColumnName="investstatus" />
+                <ScalarProperty Name="createtime" ColumnName="createtime" />
+                <ScalarProperty Name="modifytime" ColumnName="modifytime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="m_i_userstatus">
+            <EntityTypeMapping TypeName="HJSIIModel.m_i_userstatus">
+              <MappingFragment StoreEntitySet="m_i_userstatus">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="userid" ColumnName="userid" />
+                <ScalarProperty Name="brokeruserid" ColumnName="brokeruserid" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="mobilephone" ColumnName="mobilephone" />
+                <ScalarProperty Name="investstatus" ColumnName="investstatus" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="createtime" ColumnName="createtime" />
+                <ScalarProperty Name="modifytime" ColumnName="modifytime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="m_p_apierrcode">
+            <EntityTypeMapping TypeName="HJSIIModel.m_p_apierrcode">
+              <MappingFragment StoreEntitySet="m_p_apierrcode">
+                <ScalarProperty Name="apierrcodeid" ColumnName="apierrcodeid" />
+                <ScalarProperty Name="apierrcodekey" ColumnName="apierrcodekey" />
+                <ScalarProperty Name="apierrcodevalue" ColumnName="apierrcodevalue" />
+                <ScalarProperty Name="comment" ColumnName="comment" />
+                <ScalarProperty Name="createtime" ColumnName="createtime" />
+                <ScalarProperty Name="modifytime" ColumnName="modifytime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PayMehod">
+            <EntityTypeMapping TypeName="HJSIIModel.PayMehod">
+              <MappingFragment StoreEntitySet="PayMehod">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="PayMethodName" ColumnName="PayMethodName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PowerGroup">
+            <EntityTypeMapping TypeName="HJSIIModel.PowerGroup">
+              <MappingFragment StoreEntitySet="PowerGroup">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="PowerName" ColumnName="PowerName" />
+                <ScalarProperty Name="Power" ColumnName="Power" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Repayment">
+            <EntityTypeMapping TypeName="HJSIIModel.Repayment">
+              <MappingFragment StoreEntitySet="Repayment">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="BorrowInfoId" ColumnName="BorrowInfoId" />
+                <ScalarProperty Name="InvestId" ColumnName="InvestId" />
+                <ScalarProperty Name="RepayDate" ColumnName="RepayDate" />
+                <ScalarProperty Name="RepayAmount" ColumnName="RepayAmount" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ResponseCode">
+            <EntityTypeMapping TypeName="HJSIIModel.ResponseCode">
+              <MappingFragment StoreEntitySet="ResponseCode">
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ToolTip" ColumnName="ToolTip" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ScoreGet">
+            <EntityTypeMapping TypeName="HJSIIModel.ScoreGet">
+              <MappingFragment StoreEntitySet="ScoreGet">
+                <ScalarProperty Name="ScoreType" ColumnName="ScoreType" />
+                <ScalarProperty Name="ScoreDesc" ColumnName="ScoreDesc" />
+                <ScalarProperty Name="Score" ColumnName="Score" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SendSMS">
+            <EntityTypeMapping TypeName="HJSIIModel.SendSMS">
+              <MappingFragment StoreEntitySet="SendSMS">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+                <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+                <ScalarProperty Name="MsgCode" ColumnName="MsgCode" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SiteMail">
+            <EntityTypeMapping TypeName="HJSIIModel.SiteMail">
+              <MappingFragment StoreEntitySet="SiteMail">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Sender" ColumnName="Sender" />
+                <ScalarProperty Name="SenderName" ColumnName="SenderName" />
+                <ScalarProperty Name="Reciver" ColumnName="Reciver" />
+                <ScalarProperty Name="ReciverName" ColumnName="ReciverName" />
+                <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="MsgContent" ColumnName="MsgContent" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="ReadDate" ColumnName="ReadDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SiteNoIndex">
+            <EntityTypeMapping TypeName="HJSIIModel.SiteNoIndex">
+              <MappingFragment StoreEntitySet="SiteNoIndex">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="SSN" ColumnName="SSN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SiteStatistics">
+            <EntityTypeMapping TypeName="HJSIIModel.SiteStatistics">
+              <MappingFragment StoreEntitySet="SiteStatistics">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+                <ScalarProperty Name="TotalCount" ColumnName="TotalCount" />
+                <ScalarProperty Name="Profit" ColumnName="Profit" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SyncFundLog">
+            <EntityTypeMapping TypeName="HJSIIModel.SyncFundLog">
+              <MappingFragment StoreEntitySet="SyncFundLog">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Thread" ColumnName="Thread" />
+                <ScalarProperty Name="Level" ColumnName="Level" />
+                <ScalarProperty Name="Logger" ColumnName="Logger" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Exception" ColumnName="Exception" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TransferBuLog">
+            <EntityTypeMapping TypeName="HJSIIModel.TransferBuLog">
+              <MappingFragment StoreEntitySet="TransferBuLog">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Thread" ColumnName="Thread" />
+                <ScalarProperty Name="Level" ColumnName="Level" />
+                <ScalarProperty Name="Logger" ColumnName="Logger" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Exception" ColumnName="Exception" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserDetail">
+            <EntityTypeMapping TypeName="HJSIIModel.UserDetail">
+              <MappingFragment StoreEntitySet="UserDetail">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="UAddress" ColumnName="UAddress" />
+                <ScalarProperty Name="GraduationSchool" ColumnName="GraduationSchool" />
+                <ScalarProperty Name="Education" ColumnName="Education" />
+                <ScalarProperty Name="CompanyIndustry" ColumnName="CompanyIndustry" />
+                <ScalarProperty Name="CompanySize" ColumnName="CompanySize" />
+                <ScalarProperty Name="MonthIncome" ColumnName="MonthIncome" />
+                <ScalarProperty Name="Marry" ColumnName="Marry" />
+                <ScalarProperty Name="HaveHouse" ColumnName="HaveHouse" />
+                <ScalarProperty Name="HaveCar" ColumnName="HaveCar" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="SecondLinkMan" ColumnName="SecondLinkMan" />
+                <ScalarProperty Name="EmergencyContactor" ColumnName="EmergencyContactor" />
+                <ScalarProperty Name="EmergencyPhoneNumber" ColumnName="EmergencyPhoneNumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserInfo">
+            <EntityTypeMapping TypeName="HJSIIModel.UserInfo">
+              <MappingFragment StoreEntitySet="UserInfo">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Salt" ColumnName="Salt" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="IDNumber" ColumnName="IDNumber" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="UserStatus" ColumnName="UserStatus" />
+                <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+                <ScalarProperty Name="PreLoginDate" ColumnName="PreLoginDate" />
+                <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+                <ScalarProperty Name="FailedLoginCount" ColumnName="FailedLoginCount" />
+                <ScalarProperty Name="UserLevel" ColumnName="UserLevel" />
+                <ScalarProperty Name="FuiouValid" ColumnName="FuiouValid" />
+                <ScalarProperty Name="InviteCode" ColumnName="InviteCode" />
+                <ScalarProperty Name="InvitedUserCode" ColumnName="InvitedUserCode" />
+                <ScalarProperty Name="HeadImg" ColumnName="HeadImg" />
+                <ScalarProperty Name="LoginFaileDate" ColumnName="LoginFaileDate" />
+                <ScalarProperty Name="PreviousLoginDate" ColumnName="PreviousLoginDate" />
+                <ScalarProperty Name="UserScore" ColumnName="UserScore" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserInfo_BankCard">
+            <EntityTypeMapping TypeName="HJSIIModel.UserInfo_BankCard">
+              <MappingFragment StoreEntitySet="UserInfo_BankCard">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="BankProvinceId" ColumnName="BankProvinceId" />
+                <ScalarProperty Name="BankCityId" ColumnName="BankCityId" />
+                <ScalarProperty Name="BankAreaId" ColumnName="BankAreaId" />
+                <ScalarProperty Name="BankAddress" ColumnName="BankAddress" />
+                <ScalarProperty Name="BankName" ColumnName="BankName" />
+                <ScalarProperty Name="BankCardNo" ColumnName="BankCardNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserInfo_Invest">
+            <EntityTypeMapping TypeName="HJSIIModel.UserInfo_Invest">
+              <MappingFragment StoreEntitySet="UserInfo_Invest">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+                <ScalarProperty Name="TotalCount" ColumnName="TotalCount" />
+                <ScalarProperty Name="CurrentYear" ColumnName="CurrentYear" />
+                <ScalarProperty Name="CurrentMonth" ColumnName="CurrentMonth" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserInfo_Score">
+            <EntityTypeMapping TypeName="HJSIIModel.UserInfo_Score">
+              <MappingFragment StoreEntitySet="UserInfo_Score">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="ScoreType" ColumnName="ScoreType" />
+                <ScalarProperty Name="Score" ColumnName="Score" />
+                <ScalarProperty Name="Remain" ColumnName="Remain" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserLog">
+            <EntityTypeMapping TypeName="HJSIIModel.UserLog">
+              <MappingFragment StoreEntitySet="UserLog">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="ActionName" ColumnName="ActionName" />
+                <ScalarProperty Name="ActionDesc" ColumnName="ActionDesc" />
+                <ScalarProperty Name="ActionDate" ColumnName="ActionDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="AutoUpdateBorrowStatus" FunctionName="HJSIIModel.Store.AutoUpdateBorrowStatus" />
+          <FunctionImportMapping FunctionImportName="DeleteCurrentMonthRank" FunctionName="HJSIIModel.Store.DeleteCurrentMonthRank" />
+          <FunctionImportMapping FunctionImportName="DELETESiteStatics" FunctionName="HJSIIModel.Store.DELETESiteStatics" />
+          <FunctionImportMapping FunctionImportName="DelFuiouFundLogByOpId" FunctionName="HJSIIModel.Store.DelFuiouFundLogByOpId" />
+          <FunctionImportMapping FunctionImportName="GetBorrowInfo" FunctionName="HJSIIModel.Store.GetBorrowInfo">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="HJSIIModel.GetBorrowInfo_Result">
+                <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="TotalCount" ColumnName="TotalCount" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetInvestAmount" FunctionName="HJSIIModel.Store.GetInvestAmount" />
+          <FunctionImportMapping FunctionImportName="GetProductInvestBalances" FunctionName="HJSIIModel.Store.GetProductInvestBalances" />
+          <FunctionImportMapping FunctionImportName="GetRankData" FunctionName="HJSIIModel.Store.GetRankData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="HJSIIModel.GetRankData_Result">
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetSiteStatics" FunctionName="HJSIIModel.Store.GetSiteStatics">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="HJSIIModel.GetSiteStatics_Result">
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="count" ColumnName="count" />
+                <ScalarProperty Name="profit" ColumnName="profit" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="InsertProductInvestBalances" FunctionName="HJSIIModel.Store.InsertProductInvestBalances" />
+          <FunctionImportMapping FunctionImportName="InvestRepayUpdateBorrowStatus" FunctionName="HJSIIModel.Store.InvestRepayUpdateBorrowStatus" />
+          <FunctionImportMapping FunctionImportName="RegScore" FunctionName="HJSIIModel.Store.RegScore" />
+          <FunctionImportMapping FunctionImportName="SetBorrowStatus" FunctionName="HJSIIModel.Store.SetBorrowStatus" />
+          <FunctionImportMapping FunctionImportName="SiteIndex" FunctionName="HJSIIModel.Store.SiteIndex" />
+          <FunctionImportMapping FunctionImportName="UpdateBorrowAndInvest" FunctionName="HJSIIModel.Store.UpdateBorrowAndInvest" />
+          <FunctionImportMapping FunctionImportName="UpdateBorrowRecordDate" FunctionName="HJSIIModel.Store.UpdateBorrowRecordDate" />
+          <FunctionImportMapping FunctionImportName="UpdateInvestStatus" FunctionName="HJSIIModel.Store.UpdateInvestStatus" />
+          <FunctionImportMapping FunctionImportName="UpdateUserInvestStatusByBorrowID" FunctionName="HJSIIModel.Store.UpdateUserInvestStatusByBorrowID" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

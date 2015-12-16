@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="56192c1a985a4b3c827d365b61c1ee02" Name="Diagram1">
+        <EntityTypeShape EntityType="HJSIIModel.Article" Width="1.5" PointX="8" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.ArticleCategory" Width="1.5" PointX="5.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.BorrowInfo" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.BorrowInfo_InvestRecord" Width="1.5" PointX="6" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.BorrowInfoOperation" Width="1.5" PointX="6" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.BrokerLog" Width="1.5" PointX="8.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.CommissionLog" Width="1.5" PointX="8.75" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.Employee" Width="1.5" PointX="10.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.EmployeeLog" Width="1.5" PointX="10.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.FuiouFundLog" Width="1.5" PointX="10.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.FuiouFundOperationLog" Width="1.5" PointX="12.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.GuaranteeType" Width="1.5" PointX="1.5" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.hxb_sys_cfg" Width="1.5" PointX="12.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.m_b_brokerinfo" Width="1.5" PointX="12.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.m_b_repayinfo" Width="1.5" PointX="12.75" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.m_b_repayinfo_detail" Width="1.5" PointX="8.75" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.m_b_repayinfodtl_manager" Width="1.5" PointX="14.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.m_b_token" Width="1.5" PointX="14.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.m_b_weixin_api" Width="1.5" PointX="14.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.m_code" Width="1.5" PointX="14.75" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.m_i_userinfo" Width="1.5" PointX="10.75" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.m_i_userstatus" Width="1.5" PointX="12.75" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.m_p_apierrcode" Width="1.5" PointX="14.75" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.PayMehod" Width="1.5" PointX="1.5" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.PowerGroup" Width="1.5" PointX="16.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.Repayment" Width="1.5" PointX="16.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.ResponseCode" Width="1.5" PointX="5.75" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.ScoreGet" Width="1.5" PointX="0.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.SendSMS" Width="1.5" PointX="16.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.SiteMail" Width="1.5" PointX="16.75" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.SiteNoIndex" Width="1.5" PointX="5.75" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.SiteStatistics" Width="1.5" PointX="16.75" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.SyncFundLog" Width="1.5" PointX="16.75" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.TransferBuLog" Width="1.5" PointX="18.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.UserDetail" Width="1.5" PointX="3" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.UserInfo" Width="1.5" PointX="0.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.UserInfo_BankCard" Width="1.5" PointX="3" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.UserInfo_Invest" Width="1.5" PointX="3" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.UserInfo_Score" Width="1.5" PointX="3" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HJSIIModel.UserLog" Width="1.5" PointX="3" PointY="29.5" IsExpanded="true" />
+        <AssociationConnector Association="HJSIIModel.FK_Article_ArticleCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="HJSIIModel.FK_BorrowInfo_GuaranteeType" ManuallyRouted="false" />
+        <AssociationConnector Association="HJSIIModel.FK_BorrowInfo_InvestRecord_BorrowInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HJSIIModel.FK_BorrowInfo_PayMehod" ManuallyRouted="false" />
+        <AssociationConnector Association="HJSIIModel.FK_BorrowInfoOperation_BorrowInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HJSIIModel.FK_BorrowInfo_InvestRecord_UserInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HJSIIModel.FK_UserInfo_Score_ScoreGet" ManuallyRouted="false" />
+        <AssociationConnector Association="HJSIIModel.FK_UserDetail_UserInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HJSIIModel.FK_UserInfo_BankCard_UserInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HJSIIModel.FK_UserInfo_Invest_UserInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HJSIIModel.FK_UserInfo_Score_UserInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HJSIIModel.FK_UserLog_UserInfo" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

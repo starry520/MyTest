@@ -12,3 +12,8 @@ E:\Code\MyTest\DIVTest\bin\Debug\DIVTest.pdb
 E:\Code\MyTest\DIVTest\obj\x86\Debug\DIVTest.csprojResolveAssemblyReference.cache
 E:\Code\MyTest\DIVTest\obj\x86\Debug\DIVTest.exe
 E:\Code\MyTest\DIVTest\obj\x86\Debug\DIVTest.pdb
+E:\GitCode\MyTest\DIVTest\obj\x86\Debug\DIVTest.exe
+E:\GitCode\MyTest\DIVTest\obj\x86\Debug\DIVTest.pdb
+E:\GitCode\MyTest\DIVTest\bin\Debug\DIVTest.exe
+E:\GitCode\MyTest\DIVTest\bin\Debug\DIVTest.pdb
+E:\GitCode\MyTest\DIVTest\obj\x86\Debug\DIVTest.csprojResolveAssemblyReference.cache
