@@ -13,3 +13,8 @@ E:\Code\MyTest\电话号码整理1\bin\Debug\电话号码整理1.pdb
 E:\Code\MyTest\电话号码整理1\obj\x86\Debug\电话号码整理1.csprojResolveAssemblyReference.cache
 E:\Code\MyTest\电话号码整理1\obj\x86\Debug\电话号码整理1.exe
 E:\Code\MyTest\电话号码整理1\obj\x86\Debug\电话号码整理1.pdb
+E:\GitCode\MyTest\电话号码整理1\obj\x86\Debug\电话号码整理1.exe
+E:\GitCode\MyTest\电话号码整理1\obj\x86\Debug\电话号码整理1.pdb
+E:\GitCode\MyTest\电话号码整理1\obj\x86\Debug\电话号码整理1.csprojResolveAssemblyReference.cache
+E:\GitCode\MyTest\电话号码整理1\bin\Debug\电话号码整理1.exe
+E:\GitCode\MyTest\电话号码整理1\bin\Debug\电话号码整理1.pdb

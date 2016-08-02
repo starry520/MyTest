@@ -14,3 +14,9 @@ E:\Code\MyTest\WebApplication1\bin\WebApplication1.pdb
 E:\Code\MyTest\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
 E:\Code\MyTest\WebApplication1\obj\Debug\WebApplication1.dll
 E:\Code\MyTest\WebApplication1\obj\Debug\WebApplication1.pdb
+E:\GitCode\MyTest\WebApplication1\bin\WebApplication1.dll.config
+E:\GitCode\MyTest\WebApplication1\bin\WebApplication1.dll
+E:\GitCode\MyTest\WebApplication1\bin\WebApplication1.pdb
+E:\GitCode\MyTest\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
+E:\GitCode\MyTest\WebApplication1\obj\Debug\WebApplication1.dll
+E:\GitCode\MyTest\WebApplication1\obj\Debug\WebApplication1.pdb

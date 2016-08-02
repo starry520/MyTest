@@ -8,3 +8,9 @@ D:\zj\Mycode\MyTest\PopDiv\bin\PopDiv.pdb
 D:\zj\Mycode\MyTest\PopDiv\obj\Debug\PopDiv.csprojResolveAssemblyReference.cache
 D:\zj\Mycode\MyTest\PopDiv\obj\Debug\PopDiv.dll
 D:\zj\Mycode\MyTest\PopDiv\obj\Debug\PopDiv.pdb
+E:\GitCode\MyTest\PopDiv\bin\PopDiv.dll.config
+E:\GitCode\MyTest\PopDiv\bin\PopDiv.dll
+E:\GitCode\MyTest\PopDiv\bin\PopDiv.pdb
+E:\GitCode\MyTest\PopDiv\obj\Debug\PopDiv.csprojResolveAssemblyReference.cache
+E:\GitCode\MyTest\PopDiv\obj\Debug\PopDiv.dll
+E:\GitCode\MyTest\PopDiv\obj\Debug\PopDiv.pdb

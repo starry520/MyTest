@@ -14,3 +14,11 @@ E:\Code\MyTest\html5\bin\html5.pdb
 E:\Code\MyTest\html5\obj\Debug\html5.csprojResolveAssemblyReference.cache
 E:\Code\MyTest\html5\obj\Debug\html5.dll
 E:\Code\MyTest\html5\obj\Debug\html5.pdb
+E:\GitCode\MyTest\html5\bin\html5.dll.config
+E:\GitCode\MyTest\html5\bin\html5.dll
+E:\GitCode\MyTest\html5\bin\html5.pdb
+E:\GitCode\MyTest\html5\obj\Debug\html5.csprojResolveAssemblyReference.cache
+E:\GitCode\MyTest\html5\obj\Debug\html5.dll
+E:\GitCode\MyTest\html5\obj\Debug\html5.pdb
+E:\GitCode\MyTest\html5\bin\Dapper.dll
+E:\GitCode\MyTest\html5\bin\Dapper.xml

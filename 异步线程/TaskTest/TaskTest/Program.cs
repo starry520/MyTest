@@ -12,6 +12,16 @@ namespace TaskTest
     {
         static void Main(string[] args)
         {
+
+            int s = 1;
+            string s1 = null;
+            if (s == 1|| s1.ToString()=="123")
+            {
+                
+            }
+
+
+
             List<Uri> uris = new List<Uri>();
 
             uris.Add(new Uri("http://localhost:26936/QuickPage.aspx"));
@@ -63,6 +73,7 @@ namespace TaskTest
 
     public class MyClass
     {
+        
         public MyClass()
         {
             DisplayValue(); //这里不会阻塞

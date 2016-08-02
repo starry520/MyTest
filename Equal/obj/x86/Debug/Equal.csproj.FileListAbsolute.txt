@@ -12,3 +12,10 @@ E:\Code\MyTest\Equal\bin\Debug\CommClass.pdb
 E:\Code\MyTest\Equal\obj\x86\Debug\Equal.csprojResolveAssemblyReference.cache
 E:\Code\MyTest\Equal\obj\x86\Debug\Equal.exe
 E:\Code\MyTest\Equal\obj\x86\Debug\Equal.pdb
+E:\GitCode\MyTest\Equal\bin\Debug\Equal.exe
+E:\GitCode\MyTest\Equal\bin\Debug\Equal.pdb
+E:\GitCode\MyTest\Equal\bin\Debug\CommClass.dll
+E:\GitCode\MyTest\Equal\bin\Debug\CommClass.pdb
+E:\GitCode\MyTest\Equal\obj\x86\Debug\Equal.csprojResolveAssemblyReference.cache
+E:\GitCode\MyTest\Equal\obj\x86\Debug\Equal.exe
+E:\GitCode\MyTest\Equal\obj\x86\Debug\Equal.pdb

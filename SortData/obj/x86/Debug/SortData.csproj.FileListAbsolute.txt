@@ -8,3 +8,8 @@ E:\Code\MyTest\SortData\bin\Debug\SortData.pdb
 E:\Code\MyTest\SortData\obj\x86\Debug\SortData.csprojResolveAssemblyReference.cache
 E:\Code\MyTest\SortData\obj\x86\Debug\SortData.exe
 E:\Code\MyTest\SortData\obj\x86\Debug\SortData.pdb
+E:\GitCode\MyTest\SortData\bin\Debug\SortData.exe
+E:\GitCode\MyTest\SortData\bin\Debug\SortData.pdb
+E:\GitCode\MyTest\SortData\obj\x86\Debug\SortData.csprojResolveAssemblyReference.cache
+E:\GitCode\MyTest\SortData\obj\x86\Debug\SortData.exe
+E:\GitCode\MyTest\SortData\obj\x86\Debug\SortData.pdb

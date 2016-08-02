@@ -6,3 +6,8 @@ E:\Code\MyTest\BruteForce\bin\Debug\BruteForce.exe
 E:\Code\MyTest\BruteForce\bin\Debug\BruteForce.pdb
 E:\Code\MyTest\BruteForce\obj\x86\Debug\BruteForce.exe
 E:\Code\MyTest\BruteForce\obj\x86\Debug\BruteForce.pdb
+E:\GitCode\MyTest\BruteForce\bin\Debug\BruteForce.exe
+E:\GitCode\MyTest\BruteForce\bin\Debug\BruteForce.pdb
+E:\GitCode\MyTest\BruteForce\obj\x86\Debug\BruteForce.csprojResolveAssemblyReference.cache
+E:\GitCode\MyTest\BruteForce\obj\x86\Debug\BruteForce.exe
+E:\GitCode\MyTest\BruteForce\obj\x86\Debug\BruteForce.pdb

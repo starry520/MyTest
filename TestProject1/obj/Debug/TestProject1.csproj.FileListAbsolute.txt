@@ -5,3 +5,10 @@ d:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\TestProject1\bin\De
 d:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\TestProject1\obj\Debug\TestProject1.dll
 d:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\TestProject1\obj\Debug\TestProject1.pdb
 D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\TestProject1\obj\Debug\TestProject1.csprojResolveAssemblyReference.cache
+E:\GitCode\MyTest\TestProject1\bin\Debug\TestProject1.dll
+E:\GitCode\MyTest\TestProject1\bin\Debug\TestProject1.pdb
+E:\GitCode\MyTest\TestProject1\bin\Debug\AppSample.dll
+E:\GitCode\MyTest\TestProject1\bin\Debug\AppSample.pdb
+E:\GitCode\MyTest\TestProject1\obj\Debug\TestProject1.csprojResolveAssemblyReference.cache
+E:\GitCode\MyTest\TestProject1\obj\Debug\TestProject1.dll
+E:\GitCode\MyTest\TestProject1\obj\Debug\TestProject1.pdb

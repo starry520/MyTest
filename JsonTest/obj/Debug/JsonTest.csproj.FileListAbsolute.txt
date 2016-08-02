@@ -8,3 +8,9 @@ D:\zj\Mycode\MyTest\JsonTest\bin\JsonTest.pdb
 D:\zj\Mycode\MyTest\JsonTest\obj\Debug\JsonTest.csprojResolveAssemblyReference.cache
 D:\zj\Mycode\MyTest\JsonTest\obj\Debug\JsonTest.dll
 D:\zj\Mycode\MyTest\JsonTest\obj\Debug\JsonTest.pdb
+E:\GitCode\MyTest\JsonTest\bin\JsonTest.dll.config
+E:\GitCode\MyTest\JsonTest\bin\JsonTest.dll
+E:\GitCode\MyTest\JsonTest\bin\JsonTest.pdb
+E:\GitCode\MyTest\JsonTest\obj\Debug\JsonTest.csprojResolveAssemblyReference.cache
+E:\GitCode\MyTest\JsonTest\obj\Debug\JsonTest.dll
+E:\GitCode\MyTest\JsonTest\obj\Debug\JsonTest.pdb

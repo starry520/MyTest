@@ -16,18 +16,18 @@ namespace 电话号码整理1
         static string strConn07 = "Provider=Microsoft.Ace.OleDb.12.0;data source={0} ;Extended Properties='Excel 12.0; HDR=NO; IMEX=1'";
         static void Main(string[] args)
         {
-            Random rnd = new Random();
-            StringBuilder sb = new StringBuilder();
-            for (int i = 1; i < 5000; i++)
-            { 
-                int number = rnd.Next(0, 100);
-                sb.Append(i + "," + number);
-                sb.Append("\r\n");
-            }
+            //Random rnd = new Random();
+            //StringBuilder sb = new StringBuilder();
+            //for (int i = 1; i < 5000; i++)
+            //{ 
+            //    int number = rnd.Next(0, 100);
+            //    sb.Append(i + "," + number);
+            //    sb.Append("\r\n");
+            //}
 
-            string ss = sb.ToString();
+           // string ss = sb.ToString();
 
-            string path = @"d:\Users\zjliu\Desktop\竞争对手.xlsx";
+            string path = @"E:\Git\HJS_pc\HJS.Web\upload\20160204143229725.xlsx";
             GetExcelFirstTableName(path);
         }
 

@@ -18,3 +18,10 @@ E:\Code\MyTest\xssTest\bin\AccountCrypt.dll
 E:\Code\MyTest\xssTest\obj\Debug\xssTest.csprojResolveAssemblyReference.cache
 E:\Code\MyTest\xssTest\obj\Debug\xssTest.dll
 E:\Code\MyTest\xssTest\obj\Debug\xssTest.pdb
+E:\GitCode\MyTest\xssTest\bin\xssTest.dll.config
+E:\GitCode\MyTest\xssTest\bin\xssTest.dll
+E:\GitCode\MyTest\xssTest\bin\xssTest.pdb
+E:\GitCode\MyTest\xssTest\bin\AccountCrypt.dll
+E:\GitCode\MyTest\xssTest\obj\Debug\xssTest.csprojResolveAssemblyReference.cache
+E:\GitCode\MyTest\xssTest\obj\Debug\xssTest.dll
+E:\GitCode\MyTest\xssTest\obj\Debug\xssTest.pdb

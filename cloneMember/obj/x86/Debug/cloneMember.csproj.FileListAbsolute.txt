@@ -19,3 +19,10 @@ E:\Code\MyTest\cloneMember\bin\Debug\CommClass.pdb
 E:\Code\MyTest\cloneMember\obj\x86\Debug\cloneMember.csprojResolveAssemblyReference.cache
 E:\Code\MyTest\cloneMember\obj\x86\Debug\cloneMember.exe
 E:\Code\MyTest\cloneMember\obj\x86\Debug\cloneMember.pdb
+E:\GitCode\MyTest\cloneMember\bin\Debug\cloneMember.exe
+E:\GitCode\MyTest\cloneMember\bin\Debug\cloneMember.pdb
+E:\GitCode\MyTest\cloneMember\bin\Debug\CommClass.dll
+E:\GitCode\MyTest\cloneMember\bin\Debug\CommClass.pdb
+E:\GitCode\MyTest\cloneMember\obj\x86\Debug\cloneMember.csprojResolveAssemblyReference.cache
+E:\GitCode\MyTest\cloneMember\obj\x86\Debug\cloneMember.exe
+E:\GitCode\MyTest\cloneMember\obj\x86\Debug\cloneMember.pdb

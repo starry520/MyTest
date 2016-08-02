@@ -10,3 +10,7 @@ E:\Code\MyTest\DictionaryTest\bin\Debug\DictionaryTest.exe
 E:\Code\MyTest\DictionaryTest\bin\Debug\DictionaryTest.pdb
 E:\Code\MyTest\DictionaryTest\obj\x86\Debug\DictionaryTest.exe
 E:\Code\MyTest\DictionaryTest\obj\x86\Debug\DictionaryTest.pdb
+E:\GitCode\MyTest\DictionaryTest\bin\Debug\DictionaryTest.exe
+E:\GitCode\MyTest\DictionaryTest\bin\Debug\DictionaryTest.pdb
+E:\GitCode\MyTest\DictionaryTest\obj\x86\Debug\DictionaryTest.exe
+E:\GitCode\MyTest\DictionaryTest\obj\x86\Debug\DictionaryTest.pdb

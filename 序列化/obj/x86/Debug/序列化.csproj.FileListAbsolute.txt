@@ -12,3 +12,8 @@ E:\Code\MyTest\序列化\bin\Debug\序列化.pdb
 E:\Code\MyTest\序列化\obj\x86\Debug\序列化.csprojResolveAssemblyReference.cache
 E:\Code\MyTest\序列化\obj\x86\Debug\序列化.exe
 E:\Code\MyTest\序列化\obj\x86\Debug\序列化.pdb
+E:\GitCode\MyTest\序列化\bin\Debug\序列化.exe
+E:\GitCode\MyTest\序列化\bin\Debug\序列化.pdb
+E:\GitCode\MyTest\序列化\obj\x86\Debug\序列化.csprojResolveAssemblyReference.cache
+E:\GitCode\MyTest\序列化\obj\x86\Debug\序列化.exe
+E:\GitCode\MyTest\序列化\obj\x86\Debug\序列化.pdb

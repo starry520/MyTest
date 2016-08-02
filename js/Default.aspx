@@ -4,89 +4,39 @@
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
+    <script src="Scripts/jquery-1.4.1.js"></script>
 <script>
+    $(function () {
 
-//    var book = {
-//        "title": "Professional JavaScript",
-//        "authors": [
-//"Nicholas C. Zakas","Starry"
-//],
-//        edition: 3,
-//        year: 2011
-//    };
-//    var jsonText = JSON.stringify(book, function (key, value) {
-//        switch (key) {
-//            case "authors":
-//                return value.join(",")
-//            case "year":
-//                return 5000;
-//            case "edition":
-//                return undefined;
-//            default:
-//                return value;
-//        }
-//    });
-
-//    alert(jsonText);
-
-//    for (var i = 0; i < 10; i++) {
-//        doSomething(i);
-//    }
-//    alert(i); //10
-
-//    function Class1() {
-//        //self(self被附加到了对象上) self只对私有成员可见(能.点出来 i aa() .点不出来public_dd())
-//        var self = this;
-//        this.i = 1;
-//        this.aa = function () {
-//            this.i++;
-//            alert(this.i);
-//        }
-//        var private_bb = function () {
-//            alert(self.i);
-//            //self.public_dd();//错误 self无法从外部访问,同时self也无法被这个对象的公共方法所访问
-//            //aa();//错误  私有方法要通过self调用
-//            public_dd(); //可以直接调用 不能用self.public_dd();
-//            self.aa();
-//        }
-//        this.cc = function () {
-//            private_bb(); //私有函数
-//        }
-
-//        //可以直接调用
-//        //  对象的公共方法
-//        function public_dd() {
-//            self.aa();
-//            alert("dd");
-//        }
-//    }
-
-//    var o = new Class1(); //调用Class1构造函数不运行++(初始化没有调用不运行)
-//    o.cc(); //运行++
-//    document.write(o.i); //return 2
-
-    //
-
-    function checkFieldLength(fieldName, fieldLength) {
-        var str = document.getElementById(fieldName).value;
-        var theLen = 0;
-        var teststr = '';
-        for (i = 0; i < str.length; i++) {
-            teststr = str.charAt(i);
-            if (str.charCodeAt(i) > 255) {
-                theLen = theLen + 2;
+        $.ajax({
+            url: "http://www.hanxinbank.com/wap/api/BrokerApi.ashx",
+            data: { "method": "DownLoadContact", "Investrecordid": "4B92F9AD-F412-454A-8F04-2245721AD18C" },
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            dataType: "jsonp",
+            error: function (json) {
+                alert(JSON.stringify(json));
+            },
+            success: function (json) {
+                //alert(JSON.stringify(decodeURI(json)));
+                var ss = decodeURIComponent (json);
+                $('#aaa').val(decodeURIComponent(json));//
+                $('#aaa').attr('href', ss);
+                $('#aaa').click();
+              
+                //var fileURL = window.open(json, "_blank", "height=0,width=0,toolbar=no,menubar=no,scrollbars=no,resizable=on,location=no,status=no");
+                //fileURL.document.execCommand("SaveAs");
+                //fileURL.window.close();
+                //fileURL.close();
+//                jQuery('<form action="http://' + ss + '"></form>')
+//.appendTo('body').submit().remove();
+                window.open(ss, "_blank");
             }
-            else {
-                theLen = theLen + 1;
-            }
+        });
 
-            if (theLen > fieldLength) {
-                document.getElementById(fieldName).value = str.substr(0, i);
-                break;
-            }
-        }      
-    }
+    })
+  
 </script>
+    <a id="aaa" href="http://www.hanxinbank.com/File/20160229/4B92F9AD-F412-454A-8F04-2245721AD18C.pdf">123</a>
     <h2>
         Welcome to ASP.NET!
     </h2>

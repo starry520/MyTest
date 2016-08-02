@@ -13,3 +13,8 @@ E:\Code\MyTest\jstest\bin\Debug\jstest.pdb
 E:\Code\MyTest\jstest\obj\x86\Debug\jstest.csprojResolveAssemblyReference.cache
 E:\Code\MyTest\jstest\obj\x86\Debug\jstest.exe
 E:\Code\MyTest\jstest\obj\x86\Debug\jstest.pdb
+E:\GitCode\MyTest\jstest\bin\Debug\jstest.exe
+E:\GitCode\MyTest\jstest\bin\Debug\jstest.pdb
+E:\GitCode\MyTest\jstest\obj\x86\Debug\jstest.csprojResolveAssemblyReference.cache
+E:\GitCode\MyTest\jstest\obj\x86\Debug\jstest.exe
+E:\GitCode\MyTest\jstest\obj\x86\Debug\jstest.pdb

@@ -10,3 +10,9 @@ E:\Code\MyTest\泛型获取属性\bin\Debug\泛型获取属性.pdb
 E:\Code\MyTest\泛型获取属性\obj\Debug\Generics.csprojResolveAssemblyReference.cache
 E:\Code\MyTest\泛型获取属性\obj\Debug\泛型获取属性.exe
 E:\Code\MyTest\泛型获取属性\obj\Debug\泛型获取属性.pdb
+E:\GitCode\MyTest\泛型获取属性\bin\Debug\泛型获取属性.exe.config
+E:\GitCode\MyTest\泛型获取属性\obj\Debug\泛型获取属性.exe
+E:\GitCode\MyTest\泛型获取属性\obj\Debug\泛型获取属性.pdb
+E:\GitCode\MyTest\泛型获取属性\bin\Debug\泛型获取属性.exe
+E:\GitCode\MyTest\泛型获取属性\bin\Debug\泛型获取属性.pdb
+E:\GitCode\MyTest\泛型获取属性\obj\Debug\Generics.csprojResolveAssemblyReference.cache

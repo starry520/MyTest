@@ -2,3 +2,8 @@ D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\AppSample\bin\Debug
 D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\AppSample\bin\Debug\AppSample.pdb
 D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\AppSample\obj\Debug\AppSample.dll
 D:\Users\zjliu\Documents\Visual Studio 2010\Projects\DIVTest\AppSample\obj\Debug\AppSample.pdb
+E:\GitCode\MyTest\AppSample\bin\Debug\AppSample.dll
+E:\GitCode\MyTest\AppSample\bin\Debug\AppSample.pdb
+E:\GitCode\MyTest\AppSample\obj\Debug\AppSample.csprojResolveAssemblyReference.cache
+E:\GitCode\MyTest\AppSample\obj\Debug\AppSample.dll
+E:\GitCode\MyTest\AppSample\obj\Debug\AppSample.pdb
